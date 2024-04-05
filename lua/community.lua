@@ -1,5 +1,3 @@
--- if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
-
 -- AstroCommunity: import any community modules here
 -- We import this file in `lazy_setup.lua` before the `plugins/` folder.
 -- This guarantees that the specs are processed before any user plugins.
@@ -35,8 +33,6 @@ return {
   --
   -- Motion & Features
   --
-  -- { import = "astrocommunity.utility.noice-nvim" },
-  -- { import = "astrocommunity.editing-support.ultimate-autopair-nvim" },
   { import = "astrocommunity.bars-and-lines.vim-illuminate" },
   { import = "astrocommunity.completion.cmp-cmdline" },
   { import = "astrocommunity.completion.copilot-lua" },
@@ -45,38 +41,41 @@ return {
   { import = "astrocommunity.diagnostics.trouble-nvim" },
   { import = "astrocommunity.editing-support.chatgpt-nvim" },
   { import = "astrocommunity.editing-support.telescope-undo-nvim" },
-  -- { import = "astrocommunity.editing-support.todo-comments-nvim" },
   { import = "astrocommunity.fuzzy-finder.telescope-zoxide" },
-  -- { import = "astrocommunity.indent.mini-indentscope" },
   { import = "astrocommunity.motion.flash-nvim" },
   { import = "astrocommunity.motion.harpoon" },
   { import = "astrocommunity.motion.marks-nvim" },
   { import = "astrocommunity.motion.mini-surround" },
-  -- { import = "astrocommunity.project.project-nvim" },
   { import = "astrocommunity.register.nvim-neoclip-lua" },
   { import = "astrocommunity.scrolling.mini-animate" },
   { import = "astrocommunity.split-and-window.windows-nvim" },
-
-  --
-  -- Language Packs
-  --
-  { import = "astrocommunity.recipes.heirline-vscode-winbar" },
+  -- { import = "astrocommunity.indent.mini-indentscope" },
+  -- { import = "astrocommunity.project.project-nvim" },
+  -- { import = "astrocommunity.utility.noice-nvim" },
+  -- { import = "astrocommunity.editing-support.ultimate-autopair-nvim" },
+  -- { import = "astrocommunity.editing-support.todo-comments-nvim" },
   -- { import = "astrocommunity.motion.tabout-nvim" },
   -- { import = "astrocommunity.motion.leap-nvim" },
   -- { import = "astrocommunity.git.diffview-nvim" },
 
   --
+  -- Recipes
+  --
+  { import = "astrocommunity.recipes.heirline-vscode-winbar" },
+  { import = "astrocommunity.recipes.heirline-mode-text-statusline" },
+
+  --
   -- Language Packs
   --
   { import = "astrocommunity.pack.bash" },
-  { import = "astrocommunity.pack.cpp" },
-  { import = "astrocommunity.pack.docker" },
-  { import = "astrocommunity.pack.go" },
   { import = "astrocommunity.pack.json" },
   { import = "astrocommunity.pack.lua" },
   { import = "astrocommunity.pack.markdown" },
   { import = "astrocommunity.pack.python-ruff" },
-  { import = "astrocommunity.pack.rust" },
   { import = "astrocommunity.pack.yaml" },
-  { import = "astrocommunity.pack.zig" },
+  { import = "astrocommunity.pack.cpp" },
+  -- { import = "astrocommunity.pack.docker" },
+  -- { import = "astrocommunity.pack.go" },
+  -- { import = "astrocommunity.pack.rust" },
+  -- { import = "astrocommunity.pack.zig" },
 }

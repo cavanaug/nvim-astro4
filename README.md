@@ -1,34 +1,122 @@
-# AstroNvim Template
+# Cavanaugh AstroNvim
 
 **NOTE:** This is for AstroNvim v4+
 
-A template for getting started with [AstroNvim](https://github.com/AstroNvim/AstroNvim)
+## Backlog
 
-## 🛠️ Installation
+### v4 Migration
 
-#### Make a backup of your current nvim and shared folder
+- nvim-ufo, redo my custom lua folding function
+- alpha, redo my custom ordering, or maybe just move to session mgmt
+- mini.clue??
+-
 
-```shell
-mv ~/.config/nvim ~/.config/nvim.bak
-mv ~/.local/share/nvim ~/.local/share/nvim.bak
-mv ~/.local/state/nvim ~/.local/state/nvim.bak
-mv ~/.cache/nvim ~/.cache/nvim.bak
+### Next Items
+
+- History command with fzf
+- Folke flash fix /
+- Surround chars with the lsp select
+- Help, autocmd to determine vert or horizontal
+- Hydra plugin (rotate, motion, diff, quickfix)
+- Project/Harpoon
+- noice (do I really want it), what about vscode cmd window keybind
+
+### Todo Items
+
+- Typing practice, uncommon sequences that need to become automatic \[\]/,.\<>
+  - Practice text object manipulations
+    - inner (diw, di", di}, viw) and after (daw, da", da})
+    - motion w, b, }, {
+  - Next/Prev (Perhaps look at modal)
+    - \]d \]c
+- Help navigation
+  - Figure out how to set custom mappings in help files.
+- Final mappings
+- Hydra plugin for state based mappings
+- Folding (understand ufo preview & color highlighting)
+- Neotree (understand full path)
+-
+
+### Tolearn Items
+
+- quickfix
+- open file under cursor gff
+- trouble
+- ultimate-autopair
+- neoclip
+- lsp-colors
+- nvim-window-picker
+- smart-splits
+- neoconf
+
+## Icebox
+
+### diffview
+
+something for resolving merges and examining diffs in git/hg maybe switch to vim-signify from
+gitsigns
+
+### Neotree
+
+Write a neotree panel to show Info such as name, folder, possibly do something for buffers also
+
+### Folding
+
+Need to set highlight for the fold marker to be more visible for folded lines nnoremap
+z<space><space> za
+
+Ive got something for now, but could really use a bit more visibility on the fold info
+
+### Mappings
+
+#### what are these for
+
+nmap > :cnext nmap \< :cprev
+
+can i reuse these for help navigation vs spc-enter and spc-backspace?
+
+### Old classic vim settings
+
+#### Are these useful??
+
+```
+" Fancy ANSI Chars Reference
+""
+" ▉
+" ╔══╦══╗ ┌──┬──┐ ╭──┬──╮ ╭──┬──╮ ┏━━┳━━┓ ╱╲╱╲╳╳╳ ▊
+" ║┌─╨─┐║ │╔═╧═╗│ │╒═╪═╕│ │╓─╁─╖│ ┃┌─╂─┐┃ ╲╱╲╱╳╳╳ ▋
+" ╠╡ ╳ ╞╣ ├╢   ╟┤ ├┼─┼─┼┤ ├╫─╂─╫┤ ┣┿╾┼╼┿┫ ┌┄┄┐ ╎ ┏┅┅┓ ┋ ▌
+" ║└─╥─┘║ │╚═╤═╝│ │╘═╪═╛│ │╙─╀─╜│ ┃└─╂─┘┃ ░░▒▒▓▓██ ┊ ┆ ╎ ╏ ┇ ┋ ▍ ▁▂▃▄▅▆▇█
+" ╚══╩══╝ └──┴──┘ ╰──┴──╯ ╰──┴──╯ ┗━━┻━━┛ └╌╌┘ ╎ ┗╍╍┛ ┋ ▎
+" ▏
+" ▶  ❱ ⚑ ▲ △ ▴ ▵ ▶ ▷ ▸ ▹ ► ▻ ▼ ▽ ✓ ✔ ✕ ✖ ✗ ✘ ❍ ❎ ❏ ❪ ❫ ❬ ❭ ❮ ❯ ❰ ❱ ➢ ➣ ➤ ➥
+" ⚠ ⚡ ◇ ◈ ◉ ◊ ○ ◌ ◍ ◎ ● ◐ ◑ ◒ ◓ ◔ ◕ ◖ ◗ ◠ ◡ ◢ ◣ ◤ ◥ ◦ ◧ ◨ ◩ ◪ ◫ ◬ ◭ ◮ ◯ ◰ ◱ ◲
+" ◳ ◴ ◵ ◶ ◷ ◸ ◹ ◺ ◻ ◼ ◽ ◾ ◿ ✅ ☐ ☑ ☒
+"
+" ︙ ⡇ | . │ ┃ ┄ ┅ ┆ ┇ ┈ ┉ ┊ ┋ ╵ ╶ ╷ ⠅⠂
+"
 ```
 
-#### Create a new user repository from this template
+#### vim-instantmarkdown
 
-Press the "Use this template" button above to create a new repository to store your user configuration.
+Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown', 'do': 'yarn install'} "let
+g:instant_markdown_logfile = '/tmp/instant_markdown.log' "let g:instant_markdown_browser =
+'windows-webbrowser' "autocmd FileType markdown nmap <F8> :LivedownToggle<CR>
 
-You can also just clone this repository directly if you do not want to track your user configuration in GitHub.
+#### vim-signify
 
-#### Clone the repository
+Do i need to switch to this from gitsigns so hg works
 
-```shell
-git clone https://github.com/<your_user>/<your_repository> ~/.config/nvim
-```
+let g:signify_sign_change = '▲' let g:signify_sign_add = '+' let g:signify_sign_delete = '✘' let
+g:signify_sign_delete_first_line = '✘' let g:signify_sign_change = '~'
 
-#### Start Neovim
+#### Tags and navigation
 
-```shell
-nvim
-```
+Can these be set per buffer? Like help?
+
+map <Space><Return> \<C-\]> map <Space><BS> <C-T>
+
+#### NormalMode/Leader
+
+- , - Shift x -> y region 1 space left
+- . - Shift x -> y region 1 space right
