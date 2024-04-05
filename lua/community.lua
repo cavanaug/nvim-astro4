@@ -12,9 +12,7 @@ return {
   -- ColorSchemes
   --
   -- { import = "astrocommunity.colorscheme.gruvbox-baby" },
-  -- { import = "astrocommunity.colorscheme.monokai-pro-nvim" },
   -- { "luisiacc/gruvbox-baby", lazy = false },
-  -- { "loctvl842/monokai-pro.nvim", lazy = false },
   { import = "astrocommunity.colorscheme.catppuccin" },
   { import = "astrocommunity.colorscheme.gruvbox-nvim" },
   { import = "astrocommunity.colorscheme.kanagawa-nvim" },
@@ -23,6 +21,7 @@ return {
   { import = "astrocommunity.colorscheme.sonokai" },
   { import = "astrocommunity.colorscheme.tokyonight-nvim" },
   { import = "astrocommunity.colorscheme.vscode-nvim" },
+  { import = "astrocommunity.colorscheme.monokai-pro-nvim" },
   { "catppuccin", lazy = false },
   { "ellisonleao/gruvbox.nvim", lazy = false },
   { "rebelot/kanagawa.nvim", lazy = false },
@@ -31,6 +30,7 @@ return {
   { "sainnhe/sonokai", lazy = false },
   { "folke/tokyonight.nvim", lazy = false },
   { "Mofiqul/vscode.nvim", lazy = false },
+  { "loctvl842/monokai-pro.nvim", lazy = false },
 
   --
   -- Motion & Features

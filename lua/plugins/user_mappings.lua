@@ -11,11 +11,11 @@ return {
           --
           -- navigate buffer tabs with `H` and `L`
           L = {
-            function() require("astronvim.utils.buffer").nav(vim.v.count > 0 and vim.v.count or 1) end,
+            function() require("astrocore.buffer").nav(vim.v.count1) end,
             desc = "Next buffer",
           },
           H = {
-            function() require("astronvim.utils.buffer").nav(-(vim.v.count > 0 and vim.v.count or 1)) end,
+            function() require("astrocore.buffer").nav(-vim.v.count1) end,
             desc = "Previous buffer",
           },
 
@@ -29,23 +29,9 @@ return {
           ["<C-Left>"] = false,
           ["<C-Right>"] = false,
 
-          -- mappings seen under group name "Buffer"
-          ["<leader>bD"] = {
-            function()
-              require("astronvim.utils.status").heirline.buffer_picker(
-                function(bufnr) require("astronvim.utils.buffer").close(bufnr) end
-              )
-            end,
-            desc = "Pick to close",
-          },
-          -- tables with the `name` key will be registered with which-key if it's installed
-          -- this is useful for naming menus
-          -- ["<leader>b"] = { name = "Buffers" },
-
+          --
           -- Quick Mappings
           --
-          -- quick File Ops
-          -- ["<C-s>"] = { "<cmd>w!<cr>", desc = "Save File" },
 
           --
           --   Merge/Diff Mappings
@@ -105,26 +91,17 @@ return {
             desc = "Find project repos ",
           },
           ["<leader>fe"] = { function() require("telescope.builtin").commands() end, desc = "Find ex commands" },
+
           ["<leader>fa"] = {
             function()
-              local cwd = vim.fn.stdpath "config" .. "/.."
-              local search_dirs = {}
-              for _, dir in ipairs(astronvim.supported_configs) do -- search all supported config locations
-                if vim.fn.isdirectory(dir) == 1 then table.insert(search_dirs, dir) end -- add directory to search if exists
-              end
-              if vim.tbl_isempty(search_dirs) then -- if no config folders found, show warning
-                require("astronvim.utils").utils.notify("No user configuration files found", vim.log.levels.WARN)
-              else
-                if #search_dirs == 1 then cwd = search_dirs[1] end -- if only one directory, focus cwd
-                require("telescope.builtin").find_files {
-                  prompt_title = "Config Files",
-                  search_dirs = search_dirs,
-                  cwd = cwd,
-                  follow = true,
-                } -- call telescope
-              end
+              local cwd = vim.fn.stdpath "config"
+              require("telescope.builtin").find_files {
+                prompt_title = "User Config Files",
+                cwd = cwd,
+                follow = true,
+              } -- call telescope
             end,
-            desc = "Find AstroNvim config files",
+            desc = "Find Astrovim plugin files",
           },
           ["<leader>fA"] = {
             function()
@@ -139,13 +116,13 @@ return {
           },
 
           -- quick switch windows (Im not so sure about this long term as it seems to conflict with other things)
-          -- ["<leader><tab>"] = { "<cmd>tabnext<cr>", desc = "Go to next tab" },
+          ["<leader><tab>"] = { "<cmd>tabnext<cr>", desc = "Go to next tab" },
 
           -- Support my old surround muscle memory
           -- ["<leader>s"] = { "gzaiw", desc = "Surround <nextchar>", remap = true },
 
           -- Support Neotree Explorer favorites
-          -- Needs an overhaul...  Not sure I like this...
+          -- Probably needs an overhaul...  Not sure I like this...
           ["<leader>e"] = {
             "<cmd>Neotree source=filesystem selector=false reveal_force_cwd<cr>",
             desc = "Neotree Explorer (.)",
@@ -178,8 +155,7 @@ return {
           },
 
           -- Faster access to common items
-          -- ["<C-Space>"] = { "<cmd>ToggleTerm<cr>", desc = "Toggle Term" },
-          -- ["<C-/>"] = { "<cmd>ToggleTerm<cr>", desc = "Toggle terminal" },
+          -- ["<C-s>"] = { "<cmd>w!<cr>", desc = "Save File" },  -- Reserved for other items such as tmux etc
           ["<C-Space>"] = { "za", desc = "Toggle fold under cursor" },
           ["<C-Enter>"] = { "", desc = "Step into topic" },
           ["<C-BS>"] = { "", desc = "Step out of topic" },
@@ -195,8 +171,6 @@ return {
           -- ["<esc>"] = false,
           --
           -- Faster access to common items
-          -- ["<C-Space>"] = { "<cmd>ToggleTerm<cr>", desc = "Toggle Term" },
-          -- ["<C-o>"] = { "", noremap = true, desc = "Toggle Term" },
         },
       },
     },
