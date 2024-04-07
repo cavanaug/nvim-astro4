@@ -19,6 +19,7 @@
 --
 -- Things I didnt know how to convert to Lua but I still want
 vim.cmd [[
+
       autocmd BufNewFile,BufRead .envrc setfiletype sh
       autocmd BufNewFile,BufRead *.avsc setfiletype json
       autocmd BufNewFile,BufRead *.rss *.atom setfiletype xml
