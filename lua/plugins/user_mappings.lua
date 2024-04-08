@@ -94,49 +94,47 @@ return {
 
           ["<leader>fA"] = {
             function()
-              local astro = require "astrocore"
-              local search_dirs = {}
-              local cwd = vim.fn.stdpath "data" .. "/lazy"
-              local pattern = "[Aa]stro*"
-              local matches = vim.fn.glob(cwd .. "/" .. pattern)
-              for _, dir in ipairs(vim.split(matches, "\n")) do -- search all supported config locations
-                if vim.fn.isdirectory(dir) == 1 then table.insert(search_dirs, dir) end -- add directory to search if exists
-              end
-              if vim.tbl_isempty(search_dirs) then -- if no config folders found, show warning
-                astro.notify("No Astrovim plugin files found", vim.log.levels.WARN)
-              else
-                if #search_dirs == 1 then cwd = search_dirs[1] end -- if only one directory, focus cwd
-                require("telescope.builtin").find_files {
-                  prompt_title = "Astrovim Plugin Files",
-                  search_dirs = search_dirs,
-                  cwd = cwd,
-                  follow = true,
-                } -- call telescope
-              end
+              local cwd = vim.fn.stdpath "data" .. "/lazy/astronvim-v4/"
+              require("telescope.builtin").find_files {
+                prompt_title = "Astrovnim-v4 Plugin Files",
+                cwd = cwd,
+                follow = true,
+              } -- call telescope
             end,
-            desc = "Find Astrovim-v4 plugin files",
+            desc = "Find Astronvim-v4 Plugin Files",
           },
           ["<leader>fa"] = {
             function()
               local cwd = vim.fn.stdpath "config"
               require("telescope.builtin").find_files {
-                prompt_title = "User Config Files",
+                prompt_title = "Astrovim-v4 User Files",
                 cwd = cwd,
                 follow = true,
               } -- call telescope
             end,
-            desc = "Find Astrovim User Config files",
+            desc = "XXXFind Astronvim-v4 User Config files",
           },
           ["<leader>fl"] = {
             function()
-              local cwd = vim.fn.stdpath "data" .. "/lazy"
+              local cwd = vim.fn.stdpath "data" .. "/lazy/astronvim-v4/"
               require("telescope.builtin").find_files {
-                prompt_title = "Neovim Plugin Files",
+                prompt_title = "Astrovim-v4 Plugin Files",
                 cwd = cwd,
                 follow = true,
               } -- call telescope
             end,
-            desc = "Find Neovim Lazy plugin files",
+            desc = "Find words in Astrovim-v4 plugin files",
+          },
+          ["<leader>fL"] = {
+            function()
+              local cwd = vim.fn.stdpath "data" .. "/lazy/"
+              require("telescope.builtin").find_files {
+                prompt_title = "Find words in Neovim Plugin Files",
+                cwd = cwd,
+                follow = false,
+              } -- call telescope
+            end,
+            desc = "Find words in Neovim Lazy plugin files",
           },
 
           -- quick switch windows (Im not so sure about this long term as it seems to conflict with other things)
