@@ -1,4 +1,3 @@
--- if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
 return {
   "kevinhwang91/nvim-ufo",
   opts = function(plugin, opts)

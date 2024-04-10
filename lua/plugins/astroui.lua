@@ -9,9 +9,14 @@ return {
   ---@type AstroUIOpts
   opts = {
     -- change colorscheme
-    colorscheme = "monokai-pro-spectrum",
+    -- colorscheme = "monokai-pro-spectrum",
+    -- colorscheme = "github_dark_tritanopia",
+    -- colorscheme = "vscode",
+    -- colorscheme = "slate",
+    -- colorscheme = "sonokai",
     -- colorscheme = "astrodark",
     -- colorscheme = "catppuccin-mocha",
+    colorscheme = "catppuccin",
 
     -- AstroUI allows you to easily modify highlight groups easily for any and all colorschemes
     highlights = {
