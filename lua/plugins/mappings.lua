@@ -4,6 +4,9 @@ return {
     ---@type AstroCoreOpts
     opts = {
       mappings = {
+        c = {
+          -- ["vhelp"] = { "vert help" },
+        },
         --
         -- Normal Mode Maps
         --
@@ -19,6 +22,7 @@ return {
             desc = "Previous buffer",
           },
 
+          -- Reserved these for tmux, use <leader>jr for hydra resize
           -- ["<A-k>"] = { function() require("smart-splits").resize_up() end, desc = "Resize split up" },
           -- ["<A-j>"] = { function() require("smart-splits").resize_down() end, desc = "Resize split down" },
           -- ["<A-h>"] = { function() require("smart-splits").resize_left() end, desc = "Resize split left" },
@@ -112,7 +116,7 @@ return {
                 follow = true,
               } -- call telescope
             end,
-            desc = "XXXFind Astronvim-v4 User Config files",
+            desc = "Find Astronvim-v4 User Config files",
           },
           ["<leader>fl"] = {
             function()
@@ -149,18 +153,18 @@ return {
             "<cmd>Neotree source=filesystem selector=false reveal_force_cwd<cr>",
             desc = "Neotree Explorer (.)",
           },
-          ["<leader>E"] = {
-            "<cmd>Neotree source=filesystem selector=false reveal dir=~<cr>",
-            desc = "Neotree Explorer (home)",
-          },
-          ["<leader>be"] = {
-            "<cmd>Neotree source=buffers selector=false reveal<cr>",
-            desc = "Neotree Explorer (Buffers)",
-          },
-          ["<leader>ge"] = {
-            "<cmd>Neotree source=git_status selector=false reveal<cr>",
-            desc = "Neotree Explorer (Git)",
-          },
+          -- ["<leader>E"] = {
+          --   "<cmd>Neotree source=filesystem selector=false reveal dir=~<cr>",
+          --   desc = "Neotree Explorer (home)",
+          -- },
+          -- ["<leader>be"] = {
+          --   "<cmd>Neotree source=buffers selector=false reveal<cr>",
+          --   desc = "Neotree Explorer (Buffers)",
+          -- },
+          -- ["<leader>ge"] = {
+          --   "<cmd>Neotree source=git_status selector=false reveal<cr>",
+          --   desc = "Neotree Explorer (Git)",
+          -- },
           ["<leader>o"] = {
             function()
               if vim.bo.filetype == "neo-tree" then
@@ -173,9 +177,9 @@ return {
                 end
               end
             end,
-            desc = "Toggle Explorer Focus",
+            desc = "Toggle NeoTree Focus",
           },
-
+          --
           -- Faster access to common items
           -- ["<C-s>"] = { "<cmd>w!<cr>", desc = "Save File" },  -- Reserved for other items such as tmux etc
           ["<C-Space>"] = { "za", desc = "Toggle fold under cursor" },

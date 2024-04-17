@@ -37,18 +37,22 @@ return {
   { import = "astrocommunity.completion.cmp-cmdline" },
   { import = "astrocommunity.completion.copilot-lua" },
   { import = "astrocommunity.completion.copilot-lua-cmp" },
-  { import = "astrocommunity.debugging.nvim-bqf" },
+--  { import = "astrocommunity.debugging.nvim-bqf" },
   { import = "astrocommunity.diagnostics.trouble-nvim" },
   { import = "astrocommunity.editing-support.chatgpt-nvim" },
+
   { import = "astrocommunity.editing-support.telescope-undo-nvim" },
   { import = "astrocommunity.fuzzy-finder.telescope-zoxide" },
+
   { import = "astrocommunity.motion.flash-nvim" },
   { import = "astrocommunity.motion.harpoon" },
   { import = "astrocommunity.motion.marks-nvim" },
   { import = "astrocommunity.motion.mini-surround" },
+
   { import = "astrocommunity.register.nvim-neoclip-lua" },
   { import = "astrocommunity.scrolling.mini-animate" },
   { import = "astrocommunity.split-and-window.windows-nvim" },
+
   { import = "astrocommunity.indent.indent-blankline-nvim" },
   { import = "astrocommunity.indent.mini-indentscope" },
   -- { import = "astrocommunity.project.project-nvim" },

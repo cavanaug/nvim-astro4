@@ -19,13 +19,18 @@
 --
 -- Things I didnt know how to convert to Lua but I still want
 vim.cmd [[
-
+      augroup user_filetype_settings
+      autocmd!
       autocmd BufNewFile,BufRead .envrc setfiletype sh
       autocmd BufNewFile,BufRead *.avsc setfiletype json
       autocmd BufNewFile,BufRead *.rss *.atom setfiletype xml
       autocmd BufNewFile,BufRead *.json setfiletype jsonc
-      autocmd bufwritepost tmux.conf execute ':!tmux source-file %'
+      autocmd BufWritePost tmux.conf execute ':!tmux source-file %'
       "autocmd bufwritepost tmux.conf execute ':!tmux-refresh all'
+      "autocmd FileType help if winwidth("%")>4.5*winheight("%") | echo "wincmd L" | else | echo "wincmd K" | endif
+      autocmd FileType help if winwidth("%")>4.5*winheight("%") | wincmd L | else | wincmd K | endif
+      "autocmd FileType help if winnr('$') > 2 && winwidth("%")> 2.2*winheight("%")  | wincmd K | else | wincmd L | endif
+      augroup END
 ]]
 -- "autocmd BufNewFile,BufRead *.json set filetype=jsonc
 -- "let g:mergetool_layout = 'mr'
