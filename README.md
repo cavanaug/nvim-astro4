@@ -6,19 +6,18 @@
 
 ### v4 Migration
 
-- nvim-ufo, redo my custom lua folding function
 - alpha, redo my custom ordering, or maybe just move to session mgmt
-- mini.clue??
--
+- read about new astrovim root settings
 
 ### Next Items
 
+- Folke flash fix / vs f
+- tmux, sessionx
+- tmux, vim & wsl clipboard
+- diffview (see icebox)
 - History command with fzf
-- Folke flash fix /
 - Surround chars with the lsp select
 - Help, autocmd to determine vert or horizontal
-- Hydra plugin (rotate, motion, diff, quickfix)
-- Project/Harpoon
 - noice (do I really want it), what about vscode cmd window keybind
 
 ### Todo Items
@@ -32,15 +31,15 @@
 - Help navigation
   - Figure out how to set custom mappings in help files.
 - Final mappings
-- Hydra plugin for state based mappings
+- Hydra plugin for state based mappings??
 - Folding (understand ufo preview & color highlighting)
 - Neotree (understand full path)
 -
 
 ### Tolearn Items
 
-- quickfix
-- open file under cursor gff
+- quickfix window (never used it)
+- open file under cursor gff but what about line #
 - trouble
 - ultimate-autopair
 - neoclip
@@ -53,8 +52,7 @@
 
 ### diffview
 
-something for resolving merges and examining diffs in git/hg maybe switch to vim-signify from
-gitsigns
+Need to really fix this as its not working effectively now and is inhibiting productivity
 
 ### Neotree
 
@@ -78,6 +76,8 @@ can i reuse these for help navigation vs spc-enter and spc-backspace?
 ### Old classic vim settings
 
 #### Are these useful??
+
+- Need to make a standard file for this, I have copies in multiple places
 
 ```
 " Fancy ANSI Chars Reference
@@ -105,7 +105,8 @@ g:instant_markdown_logfile = '/tmp/instant_markdown.log' "let g:instant_markdown
 
 #### vim-signify
 
-Do i need to switch to this from gitsigns so hg works
+Do i need to switch to this from gitsigns so hg works. Perhaps an autocmd for mercurial tracked
+files that also disables gitsigns???
 
 let g:signify_sign_change = '▲' let g:signify_sign_add = '+' let g:signify_sign_delete = '✘' let
 g:signify_sign_delete_first_line = '✘' let g:signify_sign_change = '~'
@@ -115,8 +116,3 @@ g:signify_sign_delete_first_line = '✘' let g:signify_sign_change = '~'
 Can these be set per buffer? Like help?
 
 map <Space><Return> \<C-\]> map <Space><BS> <C-T>
-
-#### NormalMode/Leader
-
-- , - Shift x -> y region 1 space left
-- . - Shift x -> y region 1 space right

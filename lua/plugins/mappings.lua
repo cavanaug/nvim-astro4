@@ -4,9 +4,6 @@ return {
     ---@type AstroCoreOpts
     opts = {
       mappings = {
-        c = {
-          -- ["vhelp"] = { "vert help" },
-        },
         --
         -- Normal Mode Maps
         --
@@ -27,11 +24,11 @@ return {
           -- ["<A-j>"] = { function() require("smart-splits").resize_down() end, desc = "Resize split down" },
           -- ["<A-h>"] = { function() require("smart-splits").resize_left() end, desc = "Resize split left" },
           -- ["<A-l>"] = { function() require("smart-splits").resize_right() end, desc = "Resize split right" },
-          ["<C-c>"] = { "<cmd>close<cr>", desc = "Close pane" },
-          ["<C-Up>"] = false,
-          ["<C-Down>"] = false,
-          ["<C-Left>"] = false,
-          ["<C-Right>"] = false,
+          -- ["<C-c>"] = { "<cmd>close<cr>", desc = "Close pane" },
+          -- ["<C-Up>"] = false,
+          -- ["<C-Down>"] = false,
+          -- ["<C-Left>"] = false,
+          -- ["<C-Right>"] = false,
 
           --
           -- Quick Mappings
@@ -85,6 +82,7 @@ return {
             },
           },
 
+          -- Git/Goto mappings
           ["g"] = { name = "Go..." },
           ["gf"] = { "<cmd>wincmd F<cr>", desc = "Go to file:line under cursor" },
 
@@ -98,7 +96,7 @@ return {
 
           ["<leader>fA"] = {
             function()
-              local cwd = vim.fn.stdpath "data" .. "/lazy/astronvim-v4/"
+              local cwd = vim.fn.stdpath "data" .. "/astronvim-v4/"
               require("telescope.builtin").find_files {
                 prompt_title = "Astrovnim-v4 Plugin Files",
                 cwd = cwd,
@@ -147,38 +145,13 @@ return {
           -- Support my old surround muscle memory
           -- ["<leader>s"] = { "gzaiw", desc = "Surround <nextchar>", remap = true },
 
-          -- Support Neotree Explorer favorites
+          -- Support mini-files & neotree
           -- Probably needs an overhaul...  Not sure I like this...
-          ["<leader>e"] = {
+          ["<leader>E"] = {
             "<cmd>Neotree source=filesystem selector=false reveal_force_cwd<cr>",
             desc = "Neotree Explorer (.)",
           },
-          -- ["<leader>E"] = {
-          --   "<cmd>Neotree source=filesystem selector=false reveal dir=~<cr>",
-          --   desc = "Neotree Explorer (home)",
-          -- },
-          -- ["<leader>be"] = {
-          --   "<cmd>Neotree source=buffers selector=false reveal<cr>",
-          --   desc = "Neotree Explorer (Buffers)",
-          -- },
-          -- ["<leader>ge"] = {
-          --   "<cmd>Neotree source=git_status selector=false reveal<cr>",
-          --   desc = "Neotree Explorer (Git)",
-          -- },
-          ["<leader>o"] = {
-            function()
-              if vim.bo.filetype == "neo-tree" then
-                vim.cmd.wincmd "p"
-              else
-                for _, v in ipairs(vim.api.nvim_tabpage_list_wins(0)) do -- search all windows to find neo-tree
-                  if vim.api.nvim_get_option_value("filetype", { win = v }) == "neo-tree" then
-                    vim.fn.win_gotoid(v) -- go to non-neo-tree window to toggle
-                  end
-                end
-              end
-            end,
-            desc = "Toggle NeoTree Focus",
-          },
+
           --
           -- Faster access to common items
           -- ["<C-s>"] = { "<cmd>w!<cr>", desc = "Save File" },  -- Reserved for other items such as tmux etc
@@ -189,15 +162,15 @@ return {
         },
 
         --
+        -- Command Window Maps
+        --
+        -- c = {},
+
+        --
         -- Terminal Window Maps
         --
-        t = {
-          --  JUST USE TMUX...
-          -- setting a mapping to false will disable it
-          -- ["<esc>"] = false,
-          --
-          -- Faster access to common items
-        },
+        --  JUST USE TMUX...
+        -- t = {},
       },
     },
   },
