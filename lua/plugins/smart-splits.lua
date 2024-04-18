@@ -4,7 +4,7 @@
 --     set -g @plugin 'christoomey/vim-tmux-navigator' # Tmux Neovim navigation integration
 return {
   "mrjones2014/smart-splits.nvim",
-  lazy = true,
+  lazy = false,
   -- enable = false,
   dependencies = {
     {

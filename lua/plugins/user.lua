@@ -1,8 +1,27 @@
--- TODO: THIS WHOLE FILE NEEDS TO BE REFACTORED TO USE LAZY CONFIGURATION WITH FUNCTIONS
 return {
   { "AndrewRadev/bufferize.vim" },
   { "samoshkin/vim-mergetool" },
   {
+    "lukas-reineke/indent-blankline.nvim",
+    opts = function(_, opts)
+      opts.indent = { char = "┆" }
+      -- opts.indent = { char = "" }
+      -- opts.indent = { char = "╎" }
+      -- opts.indent = { char = "┃" }
+    end,
+  },
+  {
+    "max397574/better-escape.nvim",
+    opts = function(_, opts)
+      opts.indent = { char = "┆" }
+      opts.mapping = { "kj", "jj" } -- I prefer to use 'kj' instead of 'jk'
+      opts.timeout = vim.o.timeoutlen
+      opts.clear_empty_lines = true
+    end,
+  },
+  --
+  {
+    -- TODO: This needs refactoring in light of mini-files usage
     "nvim-neo-tree/neo-tree.nvim",
     branch = "v3.x",
     dependencies = {
@@ -46,37 +65,12 @@ return {
   },
 
   {
+    -- TODO: Move all theme and colorscheme related plugins to a separate file
     "projekt0n/github-nvim-theme",
     lazy = false, -- make sure we load this during startup if it is your main colorscheme
     priority = 1000, -- make sure to load this before all the other start plugins
   },
 
-  {
-    "lukas-reineke/indent-blankline.nvim",
-    -- main = "ibl", --
-    opts = function(plugin, opts)
-      opts.indent = { char = "┆" }
-      -- opts.indent = { char = "" }
-      -- opts.indent = { char = "╎" }
-      -- opts.indent = { char = "┃" }
-    end,
-  },
-  {
-    "max397574/better-escape.nvim",
-    opts = function(plugin, opts)
-      opts.indent = { char = "┆" }
-      opts.mapping = { "kj", "jj" } -- a table with mappings to use
-      opts.timeout = vim.o.timeoutlen -- the time in which the keys must be hit in ms. Use option timeoutlen by default
-      opts.clear_empty_lines = true -- clear line after escaping if there is only whitespace
-    end,
-  },
-  -- require("illuminate").configure {
-  --   under_cursor = true,
-  --   min_count_to_highlight = 2,
-  -- },
-  -- require("mini.indentscope").setup {
-  --   symbol = "│",
-  -- },
   -- require("lspconfig")["yamlls"].setup {
   --   settings = {
   --     yaml = {
