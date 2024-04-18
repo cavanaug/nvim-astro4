@@ -1,5 +1,6 @@
 -- TODO: THIS WHOLE FILE NEEDS TO BE REFACTORED TO USE LAZY CONFIGURATION WITH FUNCTIONS
 return {
+  { "AndrewRadev/bufferize.vim" },
   { "samoshkin/vim-mergetool" },
   {
     "nvim-neo-tree/neo-tree.nvim",
