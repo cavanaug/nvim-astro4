@@ -112,8 +112,14 @@ return {
         },
         mappings = {
           i = {
+            -- I prefer to keep horizontal split mappings to the S key
             ["<C-x>"] = false,
             ["<C-s>"] = actions.select_horizontal,
+            --
+            ["<C-n>"] = actions.cycle_history_next,
+            ["<C-p>"] = actions.cycle_history_prev,
+            ["<C-j>"] = actions.move_selection_next,
+            ["<C-k>"] = actions.move_selection_previous,
           },
           n = { q = actions.close },
         },
