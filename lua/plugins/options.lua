@@ -28,6 +28,7 @@ return {
           undodir = vim.env.HOME .. "/.local/state/nvim/undo/,.",
           wrap = true, -- sets vim.opt.wrap
           writebackup = true,
+          termsync = false,
 
           -- Treesitter folding
           -- foldcolumn = "2", -- set the foldclolumn width

@@ -7,6 +7,13 @@ return {
         --
         -- Normal Mode Maps
         --
+        v = {
+          --
+          -- Clipboard Mappings
+          --
+          ["<leader>Y"] = { '"+y', desc = "Yank to system clipboard" },
+          ["<leader>P"] = { '"+p', desc = "Paste from system clipboard" },
+        },
         n = {
           --
           -- navigate buffer tabs with `H` and `L`
@@ -31,8 +38,11 @@ return {
           -- ["<C-Right>"] = false,
 
           --
-          -- Quick Mappings
+          -- Clipboard Mappings
+
           --
+          ["<leader>Y"] = { '"+y', desc = "Yank to system clipboard" },
+          ["<leader>P"] = { '"+p', desc = "Paste from system clipboard" },
 
           --
           --   Merge/Diff Mappings

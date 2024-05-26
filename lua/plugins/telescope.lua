@@ -1,3 +1,4 @@
+-- if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
 --
 -- Note:  This only exists to customize 2 mappings in insert mode for horizontal split.   I couldnt figure out how to simplify
 --        to just that and instead had to pull in the whole astrovim config file

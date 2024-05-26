@@ -29,6 +29,7 @@ vim.cmd [[
       "autocmd bufwritepost tmux.conf execute ':!tmux-refresh all'
       "autocmd FileType help if winwidth("%")>4.5*winheight("%") | echo "wincmd L" | else | echo "wincmd K" | endif
       autocmd FileType help if winwidth("%")>4.5*winheight("%") | wincmd L | else | wincmd K | endif
+      "autocmd FileType man if winwidth("%")>4.5*winheight("%") | wincmd L | else | wincmd K | endif
       "autocmd FileType help if winnr('$') > 2 && winwidth("%")> 2.2*winheight("%")  | wincmd K | else | wincmd L | endif
       augroup END
 ]]
