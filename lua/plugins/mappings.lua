@@ -27,10 +27,10 @@ return {
           },
 
           -- Reserved these for tmux, use <leader>jr for hydra resize
-          -- ["<A-k>"] = { function() require("smart-splits").resize_up() end, desc = "Resize split up" },
-          -- ["<A-j>"] = { function() require("smart-splits").resize_down() end, desc = "Resize split down" },
-          -- ["<A-h>"] = { function() require("smart-splits").resize_left() end, desc = "Resize split left" },
-          -- ["<A-l>"] = { function() require("smart-splits").resize_right() end, desc = "Resize split right" },
+          ["<A-k>"] = { function() require("smart-splits").resize_up() end, desc = "Resize split up" },
+          ["<A-j>"] = { function() require("smart-splits").resize_down() end, desc = "Resize split down" },
+          ["<A-h>"] = { function() require("smart-splits").resize_left() end, desc = "Resize split left" },
+          ["<A-l>"] = { function() require("smart-splits").resize_right() end, desc = "Resize split right" },
           -- ["<C-c>"] = { "<cmd>close<cr>", desc = "Close pane" },
           -- ["<C-Up>"] = false,
           -- ["<C-Down>"] = false,
