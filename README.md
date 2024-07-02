@@ -11,7 +11,7 @@
 
 ### Next Items
 
-- Folke flash fix / vs f
+- Folke flash fix / vs f (This is fixed??)
 - tmux, sessionx
 - tmux, vim & wsl clipboard
 - diffview (see icebox)
