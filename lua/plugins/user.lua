@@ -10,16 +10,49 @@ return {
       -- opts.indent = { char = "┃" }
     end,
   },
-  {
-    "max397574/better-escape.nvim",
-    opts = function(_, opts)
-      opts.indent = { char = "┆" }
-      opts.mapping = { "kj", "jj" } -- I prefer to use 'kj' instead of 'jk'
-      opts.timeout = vim.o.timeoutlen
-      opts.clear_empty_lines = true
-    end,
+  { -- lua, default settings
+    require("better_escape").setup {
+      timeout = vim.o.timeoutlen,
+      default_mappings = true,
+      mappings = {
+        i = {
+          k = {
+            -- These can all also be functions
+            j = "<Esc>",
+          },
+        },
+        c = {
+          k = {
+            j = "<Esc>",
+          },
+        },
+        t = {
+          k = {
+            j = "<Esc>",
+          },
+        },
+        v = {
+          k = {
+            j = "<Esc>",
+          },
+        },
+        s = {
+          k = {
+            j = "<Esc>",
+          },
+        },
+      },
+    },
   },
-  --
+  -- {
+  --   "max397574/better-escape.nvim",
+  --   opts = function(_, opts)
+  --     opts.indent = { char = "┆" }
+  --     opts.mapping = { "kj", "jj" } -- I prefer to use 'kj' instead of 'jk'
+  --     opts.timeout = vim.o.timeoutlen
+  --     opts.clear_empty_lines = true
+  --   end,
+  -- },
   {
     -- TODO: This needs refactoring in light of mini-files usage
     "nvim-neo-tree/neo-tree.nvim",
