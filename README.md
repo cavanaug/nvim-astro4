@@ -8,6 +8,7 @@
 
 - alpha, redo my custom ordering, or maybe just move to session mgmt
 - read about new astrovim root settings
+- research git plugin showing blame info
 
 ### Next Items
 
@@ -19,6 +20,7 @@
 - Surround chars with the lsp select
 - Help, autocmd to determine vert or horizontal
 - noice (do I really want it), what about vscode cmd window keybind
+- Man in vim is nice, but the left sidebar/folding etc messes up formatting
 
 ### Todo Items
 
