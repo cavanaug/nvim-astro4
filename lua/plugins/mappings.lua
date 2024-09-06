@@ -60,38 +60,31 @@ return {
           --     vimdiff.executable = nvimdiff
           --     vimdiff.args = -f -d $output -M $local $base $other -c "wincmd J" -c "set modifiable" -c "set write"
           --     vimdiff.premerge = keep
-          ["<leader>m"] = {
-            name = " Merge/Diff",
-            r = { "<cmd>diffget REMOTE<cr>", "Merge <REMOTE> diff", mode = { "n", "v" } },
-            l = { "<cmd>diffget LOCAL<cr>", "Merge <LOCAL> diff", mode = { "n", "v" } },
-            b = { "<cmd>diffget BASE<cr>", "Merge <BASE>  diff", mode = { "n", "v" } },
-            p = { "<cmd>diffput<cr>", "Merge <this> diff", mode = { "n", "v" } },
-            c = { "<cmd>wincmd j<cr>wqa<cr>", "Merge complete...", mode = { "n", "v" } },
-            q = { "<cmd>cq!<cr>", "Merge quit/abandon...", mode = { "n", "v" } },
-          },
+
+          ["<leader>m"] = { name = " Merge/Diff" },
+          ["<leader>mr"] = { "<cmd>diffget REMOTE<cr>", desc = "Merge <REMOTE> diff" },
+          ["<leader>ml"] = { "<cmd>diffget LOCAL<cr>", desc = "Merge <LOCAL> diff" },
+          ["<leader>mb"] = { "<cmd>diffget BASE<cr>", desc = "Merge <BASE>  diff" },
+          ["<leader>mp"] = { "<cmd>diffput<cr>", desc = "Merge <this> diff" },
+          ["<leader>mc"] = { "<cmd>wincmd j<cr>wqa<cr>", desc = "Merge complete..." },
+          ["<leader>mq"] = { "<cmd>cq!<cr>", desc = "Merge quit/abandon..." },
 
           -- AI Mappings
-          ["<leader>a"] = {
-            name = "󰧑 AI/ChatGPT",
-            c = { "<cmd>ChatGPT<CR>", "ChatGPT" },
-            e = { "<cmd>ChatGPTEditWithInstruction<CR>", "GPT Edit with instruction", mode = { "n", "v" } },
-            g = { "<cmd>ChatGPTRun grammar_correction<CR>", "GPT Grammar Correction", mode = { "n", "v" } },
-            t = { "<cmd>ChatGPTRun translate<CR>", "GPT Translate", mode = { "n", "v" } },
-            k = { "<cmd>ChatGPTRun keywords<CR>", "GPT Keywords", mode = { "n", "v" } },
-            d = { "<cmd>ChatGPTRun docstring<CR>", "GPT Docstring", mode = { "n", "v" } },
-            a = { "<cmd>ChatGPTRun add_tests<CR>", "GPT Add Tests", mode = { "n", "v" } },
-            o = { "<cmd>ChatGPTRun optimize_code<CR>", "GPT Optimize Code", mode = { "n", "v" } },
-            s = { "<cmd>ChatGPTRun summarize<CR>", "GPT Summarize", mode = { "n", "v" } },
-            f = { "<cmd>ChatGPTRun fix_bugs<CR>", "GPT Fix Bugs", mode = { "n", "v" } },
-            x = { "<cmd>ChatGPTRun explain_code<CR>", "GPT Explain Code", mode = { "n", "v" } },
-            r = { "<cmd>ChatGPTRun roxygen_edit<CR>", "GPT Roxygen Edit", mode = { "n", "v" } },
-            l = {
-              "<cmd>ChatGPTRun code_readability_analysis<CR>",
-              "GPT Code Readability Analysis",
-              mode = { "n", "v" },
-            },
-          },
-
+          ["<leader>a"] = { name = "󰧑 AI/ChatGPT" },
+          ["<leader>aa"] = { "<cmd>ChatGPT<CR>", desc = "ChatGPT" },
+          ["<leader>ad"] = { "<cmd>ChatGPTRun docstring<CR>", desc = "GPT Docstring" },
+          ["<leader>ae"] = { "<cmd>ChatGPTEditWithInstruction<CR>", desc = "GPT Edit with instruction" },
+          ["<leader>af"] = { "<cmd>ChatGPTRun fix_bugs<CR>", desc = "GPT Fix Bugs" },
+          ["<leader>ag"] = { "<cmd>ChatGPTRun grammar_correction<CR>", desc = "GPT Grammar Correction" },
+          ["<leader>ak"] = { "<cmd>ChatGPTRun keywords<CR>", desc = "GPT Keywords" },
+          ["<leader>al"] = { "<cmd>ChatGPTRun code_readability_analysis<CR>", desc = "GPT Code Readability Analysis" },
+          ["<leader>ao"] = { "<cmd>ChatGPTRun optimize_code<CR>", desc = "GPT Optimize Code" },
+          ["<leader>ar"] = { "<cmd>ChatGPTRun roxygen_edit<CR>", desc = "GPT Roxygen Edit" },
+          ["<leader>as"] = { "<cmd>ChatGPTRun summarize<CR>", desc = "GPT Summarize" },
+          ["<leader>at"] = { "<cmd>ChatGPTRun translate<CR>", desc = "GPT Translate" },
+          ["<leader>ax"] = { "<cmd>ChatGPTRun explain_code<CR>", desc = "GPT Explain Code" },
+          --
+          --
           -- Git/Goto mappings
           ["g"] = { name = "Go..." },
           ["gf"] = { "<cmd>wincmd F<cr>", desc = "Go to file:line under cursor" },
