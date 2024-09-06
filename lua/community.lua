@@ -43,6 +43,7 @@ return {
 
   { import = "astrocommunity.editing-support.telescope-undo-nvim" },
   { import = "astrocommunity.fuzzy-finder.telescope-zoxide" },
+  { import = "astrocommunity.file-explorer.telescope-file-browser-nvim" },
 
   { import = "astrocommunity.motion.flash-nvim" },
   { import = "astrocommunity.motion.harpoon" },
@@ -80,8 +81,8 @@ return {
   { import = "astrocommunity.pack.python-ruff" },
   { import = "astrocommunity.pack.yaml" },
   { import = "astrocommunity.pack.cpp" },
-  -- { import = "astrocommunity.pack.docker" },
-  -- { import = "astrocommunity.pack.go" },
+  { import = "astrocommunity.pack.docker" },
+  { import = "astrocommunity.pack.go" },
   -- { import = "astrocommunity.pack.rust" },
   -- { import = "astrocommunity.pack.zig" },
 }

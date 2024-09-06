@@ -1,3 +1,5 @@
+if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
+-- JOHNC: Im not happy with any of the file browsers i have tried so far. I will keep looking for a better one.
 return {
   {
     "echasnovski/mini.files",

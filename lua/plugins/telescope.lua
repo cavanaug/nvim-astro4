@@ -1,7 +1,9 @@
--- if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
+-- JOHNC Note:
+-- This only exists to customize
+-- * 2 insert mode mappings for horizontal split.
+-- * 2 normal mode mappings for fs & fb
 --
--- Note:  This only exists to customize 2 mappings in insert mode for horizontal split.   I couldnt figure out how to simplify
---        to just that and instead had to pull in the whole astrovim config file
+-- I couldnt figure out how to simplify to just that and instead had to pull in the whole astrovim config file
 --
 return {
   "nvim-telescope/telescope.nvim",
@@ -14,6 +16,7 @@ return {
       build = "make",
     },
     "nvim-treesitter/nvim-treesitter",
+    "scottmckendry/telescope-resession.nvim", -- JOHNC
     {
       "AstroNvim/astrocore",
       opts = function(_, opts)
@@ -51,7 +54,10 @@ return {
           end,
           desc = "Find AstroNvim config files",
         }
-        maps.n["<Leader>fb"] = { function() require("telescope.builtin").buffers() end, desc = "Find buffers" }
+        maps.n["<Leader>fb"] =
+          { function() require("telescope").extensions.file_browser.file_browser() end, desc = "File browser" } -- JOHNC
+
+        maps.n["<Leader>fB"] = { function() require("telescope.builtin").buffers() end, desc = "Find buffers" } -- JOHNC
         maps.n["<Leader>fc"] =
           { function() require("telescope.builtin").grep_string() end, desc = "Find word under cursor" }
         maps.n["<Leader>fC"] = { function() require("telescope.builtin").commands() end, desc = "Find commands" }
@@ -69,6 +75,8 @@ return {
         end
         maps.n["<Leader>fo"] = { function() require("telescope.builtin").oldfiles() end, desc = "Find history" }
         maps.n["<Leader>fr"] = { function() require("telescope.builtin").registers() end, desc = "Find registers" }
+        maps.n["<Leader>fs"] =
+          { function() require("telescope").extensions.resession.resession() end, desc = "Find sessions" } -- JOHNC
         maps.n["<Leader>ft"] =
           { function() require("telescope.builtin").colorscheme { enable_preview = true } end, desc = "Find themes" }
         maps.n["<Leader>fw"] = { function() require("telescope.builtin").live_grep() end, desc = "Find words" }
@@ -113,9 +121,9 @@ return {
         },
         mappings = {
           i = {
-            -- I prefer to keep horizontal split mappings to the S key
-            ["<C-x>"] = false,
-            ["<C-s>"] = actions.select_horizontal,
+            -- JOHNC: I prefer to keep horizontal split mappings to the S key
+            ["<C-x>"] = false, -- JOHNC
+            ["<C-s>"] = actions.select_horizontal, -- JOHNC
             --
             ["<C-n>"] = actions.cycle_history_next,
             ["<C-p>"] = actions.cycle_history_prev,
