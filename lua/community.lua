@@ -19,7 +19,6 @@ return {
   { import = "astrocommunity.colorscheme.sonokai" },
   { import = "astrocommunity.colorscheme.tokyonight-nvim" },
   { import = "astrocommunity.colorscheme.vscode-nvim" },
-  { import = "astrocommunity.colorscheme.monokai-pro-nvim" },
   { "catppuccin", lazy = false },
   { "ellisonleao/gruvbox.nvim", lazy = false },
   { "rebelot/kanagawa.nvim", lazy = false },
@@ -28,41 +27,52 @@ return {
   { "sainnhe/sonokai", lazy = false },
   { "folke/tokyonight.nvim", lazy = false },
   { "Mofiqul/vscode.nvim", lazy = false },
-  { "loctvl842/monokai-pro.nvim", lazy = false },
 
   --
-  -- Motion & Features
+  --  UI Visual Plugins
   --
+  { import = "astrocommunity.scrolling.mini-animate" },
   { import = "astrocommunity.bars-and-lines.vim-illuminate" },
+
+  --
+  --  LSP / Completion
+  --
   { import = "astrocommunity.completion.cmp-cmdline" },
   { import = "astrocommunity.completion.copilot-lua" },
   { import = "astrocommunity.completion.copilot-lua-cmp" },
-  --  { import = "astrocommunity.debugging.nvim-bqf" },
-  { import = "astrocommunity.diagnostics.trouble-nvim" },
-  { import = "astrocommunity.editing-support.chatgpt-nvim" },
 
+  --
+  --  Telescope / Harpoon
+  --
   { import = "astrocommunity.editing-support.telescope-undo-nvim" },
   { import = "astrocommunity.fuzzy-finder.telescope-zoxide" },
   { import = "astrocommunity.file-explorer.telescope-file-browser-nvim" },
-
-  { import = "astrocommunity.motion.flash-nvim" },
   { import = "astrocommunity.motion.harpoon" },
+
+  --
+  -- Motion & Editing
+  --
+  { import = "astrocommunity.motion.flash-nvim" },
   { import = "astrocommunity.motion.marks-nvim" },
   { import = "astrocommunity.motion.mini-surround" },
-
-  -- { import = "astrocommunity.register.nvim-neoclip-lua" },
-
-  { import = "astrocommunity.scrolling.mini-animate" },
-  { import = "astrocommunity.split-and-window.windows-nvim" },
-
-  { import = "astrocommunity.indent.indent-blankline-nvim" },
-  { import = "astrocommunity.indent.mini-indentscope" },
-  { import = "astrocommunity.project.project-nvim" },
-  -- { import = "astrocommunity.utility.noice-nvim" },
-  -- { import = "astrocommunity.editing-support.ultimate-autopair-nvim" },
-  -- { import = "astrocommunity.editing-support.todo-comments-nvim" },
   -- { import = "astrocommunity.motion.tabout-nvim" },
   -- { import = "astrocommunity.motion.leap-nvim" },
+  -- { import = "astrocommunity.editing-support.ultimate-autopair-nvim" },
+  -- { import = "astrocommunity.editing-support.todo-comments-nvim" },
+
+  --
+  -- Other Various Features
+  --
+  { import = "astrocommunity.diagnostics.trouble-nvim" },
+  { import = "astrocommunity.split-and-window.windows-nvim" },
+  -- { import = "astrocommunity.editing-support.chatgpt-nvim" },
+  -- { import = "astrocommunity.indent.indent-blankline-nvim" },   -- Indenting is messed up, I need to figure out how to fix it
+  -- { import = "astrocommunity.indent.mini-indentscope" },        -- Indenting is messed up, I need to figure out how to fix it
+
+  -- { import = "astrocommunity.project.project-nvim" },
+  -- { import = "astrocommunity.debugging.nvim-bqf" },
+  -- { import = "astrocommunity.register.nvim-neoclip-lua" },
+  -- { import = "astrocommunity.utility.noice-nvim" },
   -- { import = "astrocommunity.git.diffview-nvim" },
 
   --
@@ -70,6 +80,11 @@ return {
   --
   { import = "astrocommunity.recipes.heirline-vscode-winbar" },
   { import = "astrocommunity.recipes.heirline-mode-text-statusline" },
+
+  --
+  -- Language Support
+  --
+  { import = "astrocommunity.neovim-lua-development.lazydev-nvim" },
 
   --
   -- Language Packs
@@ -83,6 +98,6 @@ return {
   { import = "astrocommunity.pack.cpp" },
   { import = "astrocommunity.pack.docker" },
   { import = "astrocommunity.pack.go" },
-  -- { import = "astrocommunity.pack.rust" },
-  -- { import = "astrocommunity.pack.zig" },
+  { import = "astrocommunity.pack.rust" },
+  { import = "astrocommunity.pack.zig" },
 }
