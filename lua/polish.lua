@@ -18,7 +18,10 @@
 -- }
 --
 -- Global variable settings
-vim.g.loaded_python_provider = 0 -- Disable python2 provider due to nvim errors in 0.10.1
+vim.g.loaded_perl_provider = 0 -- Disable provider as it unused
+vim.g.loaded_node_provider = 0 -- Disable provider as it unused
+vim.g.loaded_ruby_provider = 0 -- Disable provider as it unused
+vim.g.loaded_python_provider = 0 -- Disable provider as it unused
 vim.g.loaded_python3_provider = 0 -- Disable python3 provider due to nvim errors in 0.10.1
 -- vim.g.mergetool_layout = 'mr'
 -- vim.g.mergetool_prefer_revision = 'local'

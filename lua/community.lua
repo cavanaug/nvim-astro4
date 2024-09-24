@@ -33,6 +33,7 @@ return {
   --
   { import = "astrocommunity.scrolling.mini-animate" },
   { import = "astrocommunity.bars-and-lines.vim-illuminate" },
+  { import = "astrocommunity.icon.mini-icons" },
 
   --
   --  LSP / Completion
