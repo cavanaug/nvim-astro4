@@ -36,12 +36,13 @@
 - Hydra plugin for state based mappings??
 - Folding (understand ufo preview & color highlighting)
 - Neotree (understand full path)
--
+- Develop new solution for ctrl-g that pops a window with more info
 
 ### Tolearn Items
 
 - quickfix window (never used it)
 - open file under cursor gff but what about line #
+- lsp go to definition (vs show definition etc)
 - trouble
 - ultimate-autopair
 - neoclip

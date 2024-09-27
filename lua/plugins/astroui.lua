@@ -13,10 +13,10 @@ return {
     -- colorscheme = "github_dark_tritanopia",
     -- colorscheme = "vscode",
     -- colorscheme = "slate",
-    -- colorscheme = "sonokai",
+    colorscheme = "sonokai",
     -- colorscheme = "astrodark",
     -- colorscheme = "catppuccin-mocha",
-    colorscheme = "catppuccin",
+    -- colorscheme = "catppuccin",
 
     -- AstroUI allows you to easily modify highlight groups easily for any and all colorschemes
     highlights = {
