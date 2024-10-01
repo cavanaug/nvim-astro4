@@ -31,9 +31,17 @@ return {
   --
   --  UI Visual Plugins
   --
-  { import = "astrocommunity.scrolling.mini-animate" },
-  { import = "astrocommunity.bars-and-lines.vim-illuminate" },
-  { import = "astrocommunity.icon.mini-icons" },
+  { import = "astrocommunity.scrolling.mini-animate" }, --     -- Motion animation when jumping long distances
+  { import = "astrocommunity.bars-and-lines.vim-illuminate" }, -- Highlight other instances of word under cursor
+
+  --
+  --  Mini collection
+  --
+  { import = "astrocommunity.icon.mini-icons" }, --            -- Icons in the gutter
+  { import = "astrocommunity.motion.mini-surround" },
+  -- { import = "astrocommunity.motion.mini-move" }, --           -- Setup with hydra as a submode??
+  -- { import = "astrocommunity.color.mini-hipatterns" },
+  { import = "astrocommunity.indent.mini-indentscope" }, --    -- Indenting is messed up, I need to figure out how to fix it
 
   --
   --  LSP / Completion
@@ -43,33 +51,32 @@ return {
   { import = "astrocommunity.completion.copilot-lua-cmp" },
 
   --
-  --  Telescope / Harpoon
-  --
-  { import = "astrocommunity.editing-support.telescope-undo-nvim" },
-  { import = "astrocommunity.fuzzy-finder.telescope-zoxide" },
-  { import = "astrocommunity.file-explorer.telescope-file-browser-nvim" },
-  { import = "astrocommunity.motion.harpoon" },
-
-  --
   -- Motion & Editing
   --
   { import = "astrocommunity.motion.flash-nvim" },
   { import = "astrocommunity.motion.marks-nvim" },
-  { import = "astrocommunity.motion.mini-surround" },
+  { import = "astrocommunity.editing-support.telescope-undo-nvim" },
   -- { import = "astrocommunity.motion.tabout-nvim" },
   -- { import = "astrocommunity.motion.leap-nvim" },
   -- { import = "astrocommunity.editing-support.ultimate-autopair-nvim" },
   -- { import = "astrocommunity.editing-support.todo-comments-nvim" },
 
   --
+  --  File Searching / Exporation / Navigation
+  --
+  { import = "astrocommunity.fuzzy-finder.telescope-zoxide" },
+  { import = "astrocommunity.file-explorer.telescope-file-browser-nvim" },
+  { import = "astrocommunity.file-explorer.oil-nvim" },
+  { import = "astrocommunity.motion.harpoon" },
+
+  --
   -- Other Various Features
   --
   { import = "astrocommunity.diagnostics.trouble-nvim" },
-  { import = "astrocommunity.split-and-window.windows-nvim" },
+  { import = "astrocommunity.split-and-window.windows-nvim" }, -- TMUX support??
+
   -- { import = "astrocommunity.editing-support.chatgpt-nvim" },
   -- { import = "astrocommunity.indent.indent-blankline-nvim" },   -- Indenting is messed up, I need to figure out how to fix it
-  -- { import = "astrocommunity.indent.mini-indentscope" },        -- Indenting is messed up, I need to figure out how to fix it
-
   -- { import = "astrocommunity.project.project-nvim" },
   -- { import = "astrocommunity.debugging.nvim-bqf" },
   -- { import = "astrocommunity.register.nvim-neoclip-lua" },

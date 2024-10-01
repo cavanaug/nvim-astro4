@@ -11,9 +11,9 @@ return {
     -- change colorscheme
     -- colorscheme = "monokai-pro-spectrum",
     -- colorscheme = "github_dark_tritanopia",
-    -- colorscheme = "vscode",
+    colorscheme = "vscode",
     -- colorscheme = "slate",
-    colorscheme = "sonokai",
+    -- colorscheme = "sonokai",
     -- colorscheme = "astrodark",
     -- colorscheme = "catppuccin-mocha",
     -- colorscheme = "catppuccin",
