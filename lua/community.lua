@@ -81,6 +81,7 @@ return {
   -----------------------------------------------------------------------------------------------------------------------------
   { import = "astrocommunity.diagnostics.trouble-nvim" },
   { import = "astrocommunity.split-and-window.windows-nvim" }, -- TMUX support??
+  { import = "astrocommunity.terminal-integration.toggleterm-manager-nvim" }, -- TMUX support??
 
   -- { import = "astrocommunity.editing-support.chatgpt-nvim" },
   -- { import = "astrocommunity.project.project-nvim" },

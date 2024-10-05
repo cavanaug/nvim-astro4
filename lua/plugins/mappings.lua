@@ -31,11 +31,18 @@ return {
           ["<A-j>"] = { function() require("smart-splits").resize_down() end, desc = "Resize split down" },
           ["<A-h>"] = { function() require("smart-splits").resize_left() end, desc = "Resize split left" },
           ["<A-l>"] = { function() require("smart-splits").resize_right() end, desc = "Resize split right" },
-          -- ["<C-c>"] = { "<cmd>close<cr>", desc = "Close pane" },
-          -- ["<C-Up>"] = false,
-          -- ["<C-Down>"] = false,
-          -- ["<C-Left>"] = false,
-          -- ["<C-Right>"] = false,
+
+          -- Improved
+          ["<Leader>C"] = { function() require("astrocore.buffer").close() end, desc = "Close buffer" },
+          ["<Leader>c"] = { "<cmd>close<cr>", desc = "Close pane" },
+          ["<C-C>"] = { function() require("astrocore.buffer").close(0, true) end, desc = "Close buffer (FORCE)" },
+
+          ["<C-Up>"] = false,
+          ["<C-Down>"] = false,
+          ["<C-Left>"] = false,
+          ["<C-Right>"] = false,
+
+          ["<M-,>"] = { "<cmd>ToggleTerm direction=float<cr>", desc = "Toggle Term (Float)" },
 
           --
           -- Clipboard Mappings
@@ -173,7 +180,16 @@ return {
         -- Terminal Window Maps
         --
         --  JUST USE TMUX...
-        -- t = {},
+        t = {
+          -- Reserved these for tmux, use <leader>jr for hydra resize
+          ["<A-k>"] = { function() require("smart-splits").resize_up() end, desc = "Resize split up" },
+          ["<A-j>"] = { function() require("smart-splits").resize_down() end, desc = "Resize split down" },
+          ["<A-h>"] = { function() require("smart-splits").resize_left() end, desc = "Resize split left" },
+          ["<A-l>"] = { function() require("smart-splits").resize_right() end, desc = "Resize split right" },
+          -- ["<Esc><Esc>"] = { "<C-\\><C-n>", desc = "Exit TERM mode" },
+          -- ["<C-Space>"] = { "<C-><C-n>", desc = "Exit TERM mode" },
+          ["<A-,>"] = { "<Cmd>ToggleTerm direction=float<CR>", desc = "Toggle Term (Float)" },
+        },
       },
     },
   },

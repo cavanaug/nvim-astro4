@@ -1,5 +1,5 @@
 return {
-  { "AndrewRadev/bufferize.vim" },
+  { "AndrewRadev/bufferize.vim" }, -- :Bufferize command, which runs the given command and shows its output in a temporary buffer
   { "samoshkin/vim-mergetool" },
   {
     "lukas-reineke/indent-blankline.nvim",
