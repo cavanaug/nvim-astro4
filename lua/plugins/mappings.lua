@@ -61,31 +61,31 @@ return {
           --     vimdiff.args = -f -d $output -M $local $base $other -c "wincmd J" -c "set modifiable" -c "set write"
           --     vimdiff.premerge = keep
 
-          ["<leader>m"] = { name = " Merge/Diff" },
-          ["<leader>mr"] = { "<cmd>diffget REMOTE<cr>", desc = "Merge <REMOTE> diff (*)" },
-          ["<leader>ml"] = { "<cmd>diffget LOCAL<cr>", desc = "Merge <LOCAL> diff (*)" },
-          ["<leader>mb"] = { "<cmd>diffget BASE<cr>", desc = "Merge <BASE>  diff (*)" },
-          ["<leader>mp"] = { "<cmd>diffput<cr>", desc = "Merge <this> diff (*)" },
-          ["<leader>mc"] = { "<cmd>wincmd j<cr>wqa<cr>", desc = "Merge complete... (*)" },
-          ["<leader>mq"] = { "<cmd>cq!<cr>", desc = "Merge quit/abandon... (*)" },
+          ["<leader>m"] = { name = " Merge/Diff (*)" },
+          ["<leader>mr"] = { "<cmd>diffget REMOTE<cr>", desc = "Merge <REMOTE> diff" },
+          ["<leader>ml"] = { "<cmd>diffget LOCAL<cr>", desc = "Merge <LOCAL> diff" },
+          ["<leader>mb"] = { "<cmd>diffget BASE<cr>", desc = "Merge <BASE>  diff" },
+          ["<leader>mp"] = { "<cmd>diffput<cr>", desc = "Merge <this> diff" },
+          ["<leader>mc"] = { "<cmd>wincmd j<cr>wqa<cr>", desc = "Merge complete..." },
+          ["<leader>mq"] = { "<cmd>cq!<cr>", desc = "Merge quit/abandon..." },
 
           -- AI Mappings
-          ["<leader>a"] = { name = "󰧑 AI/ChatGPT" },
+          ["<leader>a"] = { name = "󰧑 AI/ChatGPT (*)" },
           ["<leader>aa"] = { "<cmd>ChatGPT<CR>", desc = "ChatGPT" },
-          ["<leader>ad"] = { "<cmd>ChatGPTRun docstring<CR>", desc = "GPT Docstring (*)" },
-          ["<leader>ae"] = { "<cmd>ChatGPTEditWithInstruction<CR>", desc = "GPT Edit with instruction (*)" },
-          ["<leader>af"] = { "<cmd>ChatGPTRun fix_bugs<CR>", desc = "GPT Fix Bugs (*)" },
-          ["<leader>ag"] = { "<cmd>ChatGPTRun grammar_correction<CR>", desc = "GPT Grammar Correction (*)" },
-          ["<leader>ak"] = { "<cmd>ChatGPTRun keywords<CR>", desc = "GPT Keywords (*)" },
+          ["<leader>ad"] = { "<cmd>ChatGPTRun docstring<CR>", desc = "GPT Docstring" },
+          ["<leader>ae"] = { "<cmd>ChatGPTEditWithInstruction<CR>", desc = "GPT Edit with instruction" },
+          ["<leader>af"] = { "<cmd>ChatGPTRun fix_bugs<CR>", desc = "GPT Fix Bugs" },
+          ["<leader>ag"] = { "<cmd>ChatGPTRun grammar_correction<CR>", desc = "GPT Grammar Correction" },
+          ["<leader>ak"] = { "<cmd>ChatGPTRun keywords<CR>", desc = "GPT Keywords" },
           ["<leader>al"] = {
             "<cmd>ChatGPTRun code_readability_analysis<CR>",
-            desc = "GPT Code Readability Analysis (*)",
+            desc = "GPT Code Readability Analysis",
           },
-          ["<leader>ao"] = { "<cmd>ChatGPTRun optimize_code<CR>", desc = "GPT Optimize Code (*)" },
-          ["<leader>ar"] = { "<cmd>ChatGPTRun roxygen_edit<CR>", desc = "GPT Roxygen Edit (*)" },
-          ["<leader>as"] = { "<cmd>ChatGPTRun summarize<CR>", desc = "GPT Summarize (*)" },
-          ["<leader>at"] = { "<cmd>ChatGPTRun translate<CR>", desc = "GPT Translate (*)" },
-          ["<leader>ax"] = { "<cmd>ChatGPTRun explain_code<CR>", desc = "GPT Explain Code (*)" },
+          ["<leader>ao"] = { "<cmd>ChatGPTRun optimize_code<CR>", desc = "GPT Optimize Code" },
+          ["<leader>ar"] = { "<cmd>ChatGPTRun roxygen_edit<CR>", desc = "GPT Roxygen Edit" },
+          ["<leader>as"] = { "<cmd>ChatGPTRun summarize<CR>", desc = "GPT Summarize" },
+          ["<leader>at"] = { "<cmd>ChatGPTRun translate<CR>", desc = "GPT Translate" },
+          ["<leader>ax"] = { "<cmd>ChatGPTRun explain_code<CR>", desc = "GPT Explain Code" },
           --
           --
           -- Git/Goto mappings
@@ -153,10 +153,7 @@ return {
 
           -- Support mini-files & neotree
           -- Probably needs an overhaul...  Not sure I like this...
-          ["<leader>E"] = {
-            "<cmd>Neotree source=filesystem selector=false reveal_force_cwd<cr>",
-            desc = "Neotree Explorer (*)",
-          },
+          -- ["<leader>E"] = { "<cmd>Neotree source=filesystem selector=false reveal_force_cwd<cr>", desc = "Neotree Explorer (*)", },
 
           --
           -- Faster access to common items
