@@ -55,6 +55,7 @@ return {
   -------------------------------------------------------------------------------------------------------------
   { import = "astrocommunity.completion.cmp-cmdline" },
   { import = "astrocommunity.completion.copilot-lua" },
+  { import = "astrocommunity.completion.copilot-lua-cmp" }, -- Fixes tab completion
   { import = "astrocommunity.utility.hover-nvim" },
 
   -------------------------------------------------------------------------------------------------------------
