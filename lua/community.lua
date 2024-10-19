@@ -55,7 +55,6 @@ return {
   -------------------------------------------------------------------------------------------------------------
   { import = "astrocommunity.completion.cmp-cmdline" },
   { import = "astrocommunity.completion.copilot-lua" },
-  { import = "astrocommunity.completion.copilot-lua" },
   { import = "astrocommunity.utility.hover-nvim" },
 
   -------------------------------------------------------------------------------------------------------------
@@ -83,6 +82,7 @@ return {
   { import = "astrocommunity.diagnostics.trouble-nvim" },
   { import = "astrocommunity.split-and-window.windows-nvim" }, -- TMUX support??
   { import = "astrocommunity.terminal-integration.toggleterm-manager-nvim" }, -- TMUX support??
+  { import = "astrocommunity.code-runner.overseer-nvim" },
 
   -- { import = "astrocommunity.editing-support.chatgpt-nvim" },
   -- { import = "astrocommunity.project.project-nvim" },
