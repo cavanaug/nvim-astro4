@@ -12,7 +12,7 @@ return {
           clipboard = "",
           conceallevel = 2, -- enable conceal
           cursorline = true,
-          -- cursorcolumn = true,
+          cursorcolumn = true,
           ignorecase = true,
           smartcase = true,
           linebreak = true, -- linebreak soft wrap at words

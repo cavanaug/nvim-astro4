@@ -31,6 +31,7 @@ vim.cmd [[
       augroup user_filetype_settings
       autocmd!
       autocmd BufNewFile,BufRead .envrc setfiletype sh
+      autocmd BufNewFile,BufRead *.shrc setfiletype bash
       autocmd BufNewFile,BufRead *.avsc setfiletype json
       autocmd BufNewFile,BufRead *.rss *.atom setfiletype xml
       autocmd BufNewFile,BufRead *.json setfiletype jsonc
