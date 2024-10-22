@@ -136,6 +136,7 @@ return {
           ["<leader>fL"] = {
             function()
               local cwd = vim.fn.stdpath "data" .. "/lazy/"
+              -- local cwd = vim.fn.stdpath "data" .. "/lazy/"
               require("telescope.builtin").find_files {
                 prompt_title = "Find words in Neovim Plugin Files",
                 cwd = cwd,
