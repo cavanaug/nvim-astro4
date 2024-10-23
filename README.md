@@ -18,7 +18,6 @@
 - diffview (see icebox)
 - History command with fzf
 - Surround chars with the lsp select
-- Help, autocmd to determine vert or horizontal
 - noice (do I really want it), what about vscode cmd window keybind
 - Man in vim is nice, but the left sidebar/folding etc messes up formatting
 
@@ -47,8 +46,6 @@
 - ultimate-autopair
 - neoclip
 - lsp-colors
-- nvim-window-picker
-- smart-splits
 - neoconf
 
 ## Icebox
@@ -99,12 +96,6 @@ can i reuse these for help navigation vs spc-enter and spc-backspace?
 " ︙ ⡇ | . │ ┃ ┄ ┅ ┆ ┇ ┈ ┉ ┊ ┋ ╵ ╶ ╷ ⠅⠂
 "
 ```
-
-#### vim-instantmarkdown
-
-Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown', 'do': 'yarn install'} "let
-g:instant_markdown_logfile = '/tmp/instant_markdown.log' "let g:instant_markdown_browser =
-'windows-webbrowser' "autocmd FileType markdown nmap <F8> :LivedownToggle<CR>
 
 #### vim-signify
 
