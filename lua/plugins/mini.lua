@@ -20,7 +20,7 @@ return {
     },
     opts = {},
   },
-  {
+  { -- TODO: What about other themes?
     "catppuccin/nvim",
     optional = true,
     ---@type CatppuccinOptions

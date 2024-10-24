@@ -1,3 +1,4 @@
+--- Im not sure any of this is really working on windows with wsl & tmux.  I will keep it here for now.
 vim.g.clipboard = {
   name = "OSC 52",
   copy = {

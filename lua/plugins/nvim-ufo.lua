@@ -1,4 +1,5 @@
 return {
+  --- This exists to modify the folding marker to what I like
   "kevinhwang91/nvim-ufo",
   opts = function(plugin, opts)
     opts.fold_virt_text_handler = function(virtText, lnum, endLnum, width, truncate)

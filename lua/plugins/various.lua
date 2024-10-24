@@ -1,7 +1,9 @@
 return {
-  { "AndrewRadev/bufferize.vim" }, -- :Bufferize command, which runs the given command and shows its output in a temporary buffer
-  { "samoshkin/vim-mergetool" },
+  { -- Am i using this?
+    -- "samoshkin/vim-mergetool",
+  },
   {
+    -- Prettier indent markers
     "lukas-reineke/indent-blankline.nvim",
     opts = function(_, opts)
       opts.indent = { char = "┆" }
@@ -10,7 +12,7 @@ return {
       -- opts.indent = { char = "┃" }
     end,
   },
-  { -- lua, default settings
+  { -- Faster than esc for me
     require("better_escape").setup {
       timeout = vim.o.timeoutlen,
       default_mappings = false,
@@ -23,17 +25,8 @@ return {
       },
     },
   },
-  -- {
-  --   "max397574/better-escape.nvim",
-  --   opts = function(_, opts)
-  --     opts.indent = { char = "┆" }
-  --     opts.mapping = { "kj", "jj" } -- I prefer to use 'kj' instead of 'jk'
-  --     opts.timeout = vim.o.timeoutlen
-  --     opts.clear_empty_lines = true
-  --   end,
-  -- },
   {
-    -- TODO: This needs refactoring in light of mini-files usage
+    -- TODO: This needs refactoring in light of mini-files & oil usage
     "nvim-neo-tree/neo-tree.nvim",
     branch = "v3.x",
     dependencies = {
@@ -75,7 +68,6 @@ return {
       },
     },
   },
-
   {
     -- TODO: Move all theme and colorscheme related plugins to a separate file
     "projekt0n/github-nvim-theme",

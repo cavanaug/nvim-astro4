@@ -13,7 +13,7 @@ return {
   -------------------------------------------------------------------------------------------------------------
   ----  WIP: Items under evaluation
   -------------------------------------------------------------------------------------------------------------
-  { import = "astrocommunity.motion.mini-surround" },
+
   -- { import = "astrocommunity.motion.mini-move" }, --           -- Setup with hydra as a submode??
 
   --
@@ -55,36 +55,38 @@ return {
   -------------------------------------------------------------------------------------------------------------
   { import = "astrocommunity.completion.cmp-cmdline" },
   { import = "astrocommunity.completion.copilot-lua" },
-  { import = "astrocommunity.completion.copilot-lua-cmp" }, -- Fixes tab completion
+  { import = "astrocommunity.completion.copilot-lua-cmp" }, --                -- Fixes tab completion
   { import = "astrocommunity.utility.hover-nvim" },
 
   -------------------------------------------------------------------------------------------------------------
   ----  motion - "BUFFER" Motion / Editing / Searching
   -------------------------------------------------------------------------------------------------------------
   { import = "astrocommunity.motion.flash-nvim" },
-  -- { import = "astrocommunity.motion.leap-nvim" },                         -- Flash is better
-  { import = "astrocommunity.motion.marks-nvim" },
-  { import = "astrocommunity.editing-support.telescope-undo-nvim" },
-  -- { import = "astrocommunity.motion.tabout-nvim" },
+  { import = "astrocommunity.motion.mini-surround" },
+  { import = "astrocommunity.motion.marks-nvim" }, --                         -- Marks in the gutter
+  { import = "astrocommunity.editing-support.telescope-undo-nvim" }, --       -- Telescope undo stack
+  -- { import = "astrocommunity.motion.tabout-nvim" }, --                        -- Tabout of (), {} etc
+
   -- { import = "astrocommunity.editing-support.ultimate-autopair-nvim" },
 
   -------------------------------------------------------------------------------------------------------------
   ----  navigation - "FILE" Navigation / Searching / Exporation / Navigation
   -------------------------------------------------------------------------------------------------------------
-  { import = "astrocommunity.fuzzy-finder.telescope-zoxide" },
-  { import = "astrocommunity.file-explorer.telescope-file-browser-nvim" },
   { import = "astrocommunity.file-explorer.oil-nvim" },
-  { import = "astrocommunity.motion.harpoon" },
+
+  -- { import = "astrocommunity.fuzzy-finder.telescope-zoxide" },
+  -- { import = "astrocommunity.file-explorer.telescope-file-browser-nvim" },
+  -- { import = "astrocommunity.motion.harpoon" },
 
   -------------------------------------------------------------------------------------------------------------
   ----  misc - Other Various Features
   ---        - Possibly split out ai coding and project into different areas
   -------------------------------------------------------------------------------------------------------------
-  { import = "astrocommunity.diagnostics.trouble-nvim" },
-  { import = "astrocommunity.split-and-window.windows-nvim" }, -- TMUX support??
-  { import = "astrocommunity.terminal-integration.toggleterm-manager-nvim" }, -- TMUX support??
-  { import = "astrocommunity.code-runner.overseer-nvim" },
+  -- { import = "astrocommunity.split-and-window.windows-nvim" }, -- TMUX support??
+  -- { import = "astrocommunity.code-runner.overseer-nvim" },
+  -- { import = "astrocommunity.diagnostics.trouble-nvim" },                     -- Need to learn this
 
+  -- { import = "astrocommunity.terminal-integration.toggleterm-manager-nvim" }, -- TMUX support??
   -- { import = "astrocommunity.editing-support.chatgpt-nvim" },
   -- { import = "astrocommunity.project.project-nvim" },
   -- { import = "astrocommunity.debugging.nvim-bqf" },
@@ -109,12 +111,12 @@ return {
   { import = "astrocommunity.pack.bash" },
   { import = "astrocommunity.pack.json" },
   { import = "astrocommunity.pack.lua" },
-  -- { import = "astrocommunity.pack.markdown" },
+  -- { import = "astrocommunity.pack.markdown" },                                -- Using my own stack
   { import = "astrocommunity.pack.python-ruff" },
   { import = "astrocommunity.pack.yaml" },
-  { import = "astrocommunity.pack.cpp" },
-  { import = "astrocommunity.pack.docker" },
-  { import = "astrocommunity.pack.go" },
-  { import = "astrocommunity.pack.rust" },
-  { import = "astrocommunity.pack.zig" },
+  -- { import = "astrocommunity.pack.cpp" },
+  -- { import = "astrocommunity.pack.docker" },
+  -- { import = "astrocommunity.pack.go" },
+  -- { import = "astrocommunity.pack.rust" },
+  -- { import = "astrocommunity.pack.zig" },
 }
