@@ -5,6 +5,48 @@ local map = vim.keymap.set
 map("n", "H", "<cmd>bprev<cr>", { noremap = true })
 map("n", "L", "<cmd>bnext<cr>", { noremap = true })
 -- map("n", "H", function() require("snipe").open_buffer_menu() end, { desc = "Open Snipe buffer menu (*)" })
+map("n", "<M-,>", "<cmd>ToggleTerm<cr>", { noremap = true })
+map(
+  "n",
+  "<leader>L",
+  "<cmd>Telescope buffers ignore_current_buffer=true sort_mru=true sort_lastused=true initial_mode=normal<cr>",
+  { noremap = true }
+)
+map("n", "<Tab>", function()
+  require("telescope.builtin").buffers({
+    -- border = false,
+    -- border = {
+    --   preview = { 1, 1, 1, 1 }, -- top, right, bottom, left
+    --   prompt = { 1, 1, 0, 1 }, -- top, right, bottom, left
+    --   results = { 0, 0, 0, 0 }, -- top, right, bottom, left
+    -- },
+    -- entry_maker = function(entry)
+    --   return { entry }
+    -- end,
+    sort_mru = true,
+    sort_lastused = true,
+    -- ignore_current_buffer = true,
+    initial_mode = "normal",
+    layout_strategy = "horizontal",
+    previewer = true,
+    -- path_display = "shorten",
+    layout_config = {
+      -- enable_preview = true,
+      -- width_padding = 0.2, -- adjust this value to your liking
+      -- preview_position = "right", -- set to 'right' for upper right position
+      prompt_position = "top",
+      anchor = "N",
+      -- preview_width = 0.25,
+      -- preview_cutoff = 120,
+      height = 0.50,
+      -- width = vim.fn.winwidth(0),
+      width = 0.99,
+    },
+    -- yoffset = 1,
+    -- xoffset = 1,
+    -- enable_preview = true,
+  })
+end, { noremap = true })
 
 -- vim.keymap.del("n", "<C-'>")
 -- vim.keymap.set("n", "<C-n>", "<cmd>Telescope colorscheme<CR>", { desc = "Change colorscheme (*)" })
