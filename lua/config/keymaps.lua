@@ -15,17 +15,19 @@ map("n", "<C-BS>", "", { desc = "Step out of topic (*)" })
 
 map("n", "<leader>c", function()
   local buffer_count = 0
-  for _, bufinfo in ipairs(vim.fn.getbufinfo { buflisted = 1 }) do
+  for _, bufinfo in ipairs(vim.fn.getbufinfo({ buflisted = 1 })) do
     buffer_count = buffer_count + 1
   end
   if buffer_count == 1 then
-    vim.cmd "q"
+    vim.cmd("q")
   else
-    vim.cmd "bd"
+    vim.cmd("bd")
   end
 end, { desc = "Close pane (*)" })
 
-if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
+if true then
+  return {}
+end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
 
 -- maps.n["<Leader>fa"] = {
 --     function()
