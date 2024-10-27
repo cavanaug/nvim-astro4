@@ -16,4 +16,10 @@ if not pcall(require, "lazy") then
 end
 
 require "lazy_setup"
+
+--- This is not the recommended way to load configs in Astrovim but its how I want to do it
+require "config/options"
+require "config/autocmds"
+require "config/keymaps"
+
 require "polish"
