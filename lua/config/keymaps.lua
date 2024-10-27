@@ -2,15 +2,41 @@
 -- Add any additional keymaps here
 local map = vim.keymap.set
 
+map("n", "H", "<cmd>bprev<cr>", { noremap = true })
+map("n", "L", "<cmd>bnext<cr>", { noremap = true })
+-- map("n", "H", function() require("snipe").open_buffer_menu() end, { desc = "Open Snipe buffer menu (*)" })
+
 -- vim.keymap.del("n", "<C-'>")
 -- vim.keymap.set("n", "<C-n>", "<cmd>Telescope colorscheme<CR>", { desc = "Change colorscheme (*)" })
-map("n", "<leader>c", "<cmd>close<cr>", { desc = "Close pane (*)" })
 map("n", "<C-Space>", "za", { desc = "Toggle fold under cursor (*)" })
 -- note sure if this is useful
 map("n", "<C-Enter>", "", { desc = "Step into topic (*)" })
 map("n", "<C-BS>", "", { desc = "Step out of topic (*)" })
 
+map("n", "<leader>c", function()
+  local buffer_count = 0
+  for _, bufinfo in ipairs(vim.fn.getbufinfo { buflisted = 1 }) do
+    buffer_count = buffer_count + 1
+  end
+  if buffer_count == 1 then
+    vim.cmd "q"
+  else
+    vim.cmd "bd"
+  end
+end, { desc = "Close pane (*)" })
+
 if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
+
+-- maps.n["<Leader>fa"] = {
+--     function()
+--         require("telescope.builtin").find_files {
+--             prompt_title = "Config Files",
+--             cwd = vim.fn.stdpath "config",
+--             follow = true,
+--         }
+--     end,
+--     desc = "Find AstroNvim config files",
+-- }
 
 --                 v = {
 --                     --

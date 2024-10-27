@@ -2,6 +2,8 @@
 -- Default options that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/options.lua
 -- Add any additional options here
 
+------------------------------------------------------------------------------
+--- Global settings
 local g = vim.g
 g.mapleader = " "
 g.maplocalleader = ","
@@ -34,9 +36,13 @@ g.loaded_node_provider = 0 -- Disable provider as it unused
 g.loaded_ruby_provider = 0 -- Disable provider as it unused
 g.loaded_python_provider = 0 -- Disable provider as it unused
 g.loaded_python3_provider = 0 -- Disable python3 provider due to nvim errors in 0.10.1
+
+g.markdown_recommended_style = 0 -- Fix markdown indentation settings
 -- g.mergetool_layout = 'mr'
 -- g.mergetool_prefer_revision = 'local'
 
+------------------------------------------------------------------------------
+--- Options
 local opt = vim.opt
 
 opt.autowrite = true -- Enable auto write
@@ -98,6 +104,7 @@ opt.splitbelow = true -- Put new windows below current
 opt.splitkeep = "screen"
 opt.splitright = true -- Put new windows right of current
 opt.statuscolumn = [[%!v:lua.require'lazyvim.util'.ui.statuscolumn()]]
+opt.showtabline = 2
 opt.tabstop = 2 -- Number of spaces tabs count for
 opt.termsync = false
 opt.termguicolors = true -- True color support
@@ -111,18 +118,3 @@ opt.wildmode = "longest:full,full" -- Command-line completion mode
 opt.winminwidth = 5 -- Minimum window width
 opt.wrap = true -- Enable line wrap
 opt.writebackup = true
-
-if vim.fn.has "nvim-0.10" == 1 then
-  opt.smoothscroll = true
-  opt.foldexpr = "v:lua.require'lazyvim.util'.ui.foldexpr()"
-  opt.foldmethod = "expr"
-  opt.foldtext = ""
-else
-  opt.foldmethod = "indent"
-  opt.foldtext = "v:lua.require'lazyvim.util'.ui.foldtext()"
-end
-
--- Fix markdown indentation settings
-vim.g.markdown_recommended_style = 0
-
-return {}
