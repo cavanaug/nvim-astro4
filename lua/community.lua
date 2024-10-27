@@ -16,35 +16,15 @@ return {
 
   -- { import = "astrocommunity.motion.mini-move" }, --           -- Setup with hydra as a submode??
 
-  --
-  -- ColorSchemes
-  --
-  -- { import = "astrocommunity.colorscheme.gruvbox-baby" },
-  -- { "luisiacc/gruvbox-baby", lazy = false },
-  { import = "astrocommunity.colorscheme.catppuccin" },
-  { import = "astrocommunity.colorscheme.gruvbox-nvim" },
-  { import = "astrocommunity.colorscheme.kanagawa-nvim" },
-  { import = "astrocommunity.colorscheme.nightfox-nvim" },
-  { import = "astrocommunity.colorscheme.rose-pine" },
-  { import = "astrocommunity.colorscheme.sonokai" },
-  { import = "astrocommunity.colorscheme.tokyonight-nvim" },
-  { import = "astrocommunity.colorscheme.vscode-nvim" },
-  { "catppuccin", lazy = false },
-  { "ellisonleao/gruvbox.nvim", lazy = false },
-  { "rebelot/kanagawa.nvim", lazy = false },
-  { "EdenEast/nightfox.nvim", lazy = false },
-  { "rose-pine/neovim", lazy = false },
-  { "sainnhe/sonokai", lazy = false },
-  { "folke/tokyonight.nvim", lazy = false },
-  { "Mofiqul/vscode.nvim", lazy = false },
-
   -------------------------------------------------------------------------------------------------------------
   ----  visual - UI Visual Decorations
   -------------------------------------------------------------------------------------------------------------
-  { import = "astrocommunity.scrolling.mini-animate" }, --     -- Motion animation when jumping long distances
-  { import = "astrocommunity.bars-and-lines.vim-illuminate" }, -- Highlight other instances of word under cursor
-  { import = "astrocommunity.indent.mini-indentscope" }, --    -- This is about motion actions and highlighting indentation
-  { import = "astrocommunity.icon.mini-icons" }, --            -- Icons in the gutter
+  --- Mostly moved to mini family
+  ---
+  -- { import = "astrocommunity.scrolling.mini-animate" }, --     -- Motion animation when jumping long distances
+  -- { import = "astrocommunity.bars-and-lines.vim-illuminate" }, -- Highlight other instances of word under cursor
+  -- { import = "astrocommunity.indent.mini-indentscope" }, --    -- This is about motion actions and highlighting indentation
+  -- { import = "astrocommunity.icon.mini-icons" }, --            -- Icons in the gutter
 
   -- { import = "astrocommunity.color.mini-hipatterns" },
   -- { import = "astrocommunity.editing-support.todo-comments-nvim" },
@@ -57,6 +37,7 @@ return {
   { import = "astrocommunity.completion.copilot-lua" },
   { import = "astrocommunity.completion.copilot-lua-cmp" }, --                -- Fixes tab completion
   { import = "astrocommunity.utility.hover-nvim" },
+  { import = "astrocommunity.lsp.nvim-lint" },
 
   -------------------------------------------------------------------------------------------------------------
   ----  motion - "BUFFER" Motion / Editing / Searching

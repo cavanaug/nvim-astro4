@@ -1,7 +1,4 @@
 return {
-  { -- Am i using this?
-    -- "samoshkin/vim-mergetool",
-  },
   {
     -- Prettier indent markers
     "lukas-reineke/indent-blankline.nvim",
@@ -13,25 +10,27 @@ return {
     end,
   },
   { -- Faster than esc for me
-    require("better_escape").setup {
-      timeout = vim.o.timeoutlen,
-      default_mappings = false,
-      mappings = {
-        i = { k = { j = "<Esc>" } },
-        c = { k = { j = "<Esc>" } },
-        --        t = { k = { j = "<Esc>", }, },
-        --        v = { k = { j = "<Esc>", }, },
-        s = { k = { j = "<Esc>" } },
-      },
-    },
+    "max397574/better-escape.nvim",
   },
+  -- {
+  --   require("better_escape").setup({
+  --     timeout = vim.o.timeoutlen,
+  --     default_mappings = false,
+  --     mappings = {
+  --       i = { k = { j = "<Esc>" } },
+  --       c = { k = { j = "<Esc>" } },
+  --       -- t = { k = { j = "<Esc>", }, },
+  --       -- v = { k = { j = "<Esc>", }, },
+  --       s = { k = { j = "<Esc>" } },
+  --     },
+  --   }),
+  -- },
   {
     -- TODO: This needs refactoring in light of mini-files & oil usage
     "nvim-neo-tree/neo-tree.nvim",
     branch = "v3.x",
     dependencies = {
       "nvim-lua/plenary.nvim",
-      "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
       "MunifTanjim/nui.nvim",
       -- JC:  Hopefully we get kitty graphics protocol in windows Terminal
       -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
@@ -67,12 +66,6 @@ return {
         },
       },
     },
-  },
-  {
-    -- TODO: Move all theme and colorscheme related plugins to a separate file
-    "projekt0n/github-nvim-theme",
-    lazy = false, -- make sure we load this during startup if it is your main colorscheme
-    priority = 1000, -- make sure to load this before all the other start plugins
   },
 
   -- require("lspconfig")["yamlls"].setup {
