@@ -4,7 +4,7 @@
 
 ## Backlog
 
-### v4 Migration
+### V4 Migration
 
 - alpha, redo my custom ordering, or maybe just move to session mgmt
 - read about new astrovim root settings
@@ -61,17 +61,18 @@ Write a neotree panel to show Info such as name, folder, possibly do something f
 ### Folding
 
 Need to set highlight for the fold marker to be more visible for folded lines nnoremap
-z<space><space> za
 
-Ive got something for now, but could really use a bit more visibility on the fold info
+    z<space><space> za
+
+I've got something for now, but could really use a bit more visibility on the fold info
 
 ### Mappings
 
 #### what are these for
 
-nmap > :cnext nmap \< :cprev
+    nmap > :cnext nmap \< :cprev
 
-can i reuse these for help navigation vs spc-enter and spc-backspace?
+Can I reuse these for help navigation vs spc-enter and spc-backspace?
 
 ### Old classic vim settings
 
@@ -102,11 +103,11 @@ can i reuse these for help navigation vs spc-enter and spc-backspace?
 Do i need to switch to this from gitsigns so hg works. Perhaps an autocmd for mercurial tracked
 files that also disables gitsigns???
 
-let g:signify_sign_change = '▲' let g:signify_sign_add = '+' let g:signify_sign_delete = '✘' let
-g:signify_sign_delete_first_line = '✘' let g:signify_sign_change = '~'
+    let g:signify_sign_change = '▲' let g:signify_sign_add = '+' let g:signify_sign_delete = '✘' let
+    g:signify_sign_delete_first_line = '✘' let g:signify_sign_change = '~'
 
 #### Tags and navigation
 
 Can these be set per buffer? Like help?
 
-map <Space><Return> \<C-\]> map <Space><BS> <C-T>
+    map <Space><Return> \<C-\]> map <Space><BS> <C-T>

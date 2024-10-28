@@ -93,11 +93,12 @@ return {
   { import = "astrocommunity.pack.json" },
   { import = "astrocommunity.pack.lua" },
   -- { import = "astrocommunity.pack.markdown" },                                -- Using my own stack
+  -- { import = "astrocommunity.pack.harper" }, -- Grammar checking
   { import = "astrocommunity.pack.python-ruff" },
   { import = "astrocommunity.pack.yaml" },
   -- { import = "astrocommunity.pack.cpp" },
   -- { import = "astrocommunity.pack.docker" },
-  -- { import = "astrocommunity.pack.go" },
+  { import = "astrocommunity.pack.go" },
   -- { import = "astrocommunity.pack.rust" },
   -- { import = "astrocommunity.pack.zig" },
 }
