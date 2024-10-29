@@ -1,6 +1,13 @@
--- Options are automatically loaded before lazy.nvim startup
--- Default options that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/options.lua
--- Add any additional options here
+------------------------------------------------------------------------------
+-- Astrovim & LazyVim options configuration
+------------------------------------------------------------------------------
+--- Astrovim
+--- - This is really more a lazyvim pattern, still working thru the best way to do it here
+------------------------------------------------------------------------------
+--- LazyVim
+--- - Options are automatically loaded before lazy.nvim startup
+--- - Default options that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/options.lua
+------------------------------------------------------------------------------
 
 ------------------------------------------------------------------------------
 --- Global settings
@@ -8,7 +15,8 @@ local g = vim.g
 g.mapleader = " "
 g.maplocalleader = ","
 
--- LazyVim auto format
+------------------------------------------------------------------------------
+--- LazyVim specific options
 g.autoformat = true
 g.lazyvim_picker = "telescope"
 g.lazyvim_statuscolumn = {
@@ -18,6 +26,12 @@ g.lazyvim_statuscolumn = {
 -- opt.formatexpr = "v:lua.require'lazyvim.util'.format.formatexpr()"
 -- opt.statuscolumn = [[%!v:lua.require'lazyvim.util'.ui.statuscolumn()]]
 
+------------------------------------------------------------------------------
+--- Astrovim specific options
+
+------------------------------------------------------------------------------
+--- General settings
+------------------------------------------------------------------------------
 g.mapleader = " " -- sets vim.g.mapleader
 g.localleader = "," -- sets vim.g.localleader
 g.autoformat_enabled = true -- enable or disable auto formatting at start (lsp.formatting.format_on_save must be enabled)
