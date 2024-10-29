@@ -10,15 +10,13 @@ g.maplocalleader = ","
 
 -- LazyVim auto format
 g.autoformat = true
-
--- LazyVim picker to use.
 g.lazyvim_picker = "telescope"
-
--- Options for the LazyVim statuscolumn
 g.lazyvim_statuscolumn = {
   folds_open = true, -- show fold sign when fold is open
   folds_githl = true, -- highlight fold sign with git sign color
 }
+-- opt.formatexpr = "v:lua.require'lazyvim.util'.format.formatexpr()"
+-- opt.statuscolumn = [[%!v:lua.require'lazyvim.util'.ui.statuscolumn()]]
 
 g.mapleader = " " -- sets vim.g.mapleader
 g.localleader = "," -- sets vim.g.localleader
@@ -69,7 +67,6 @@ opt.foldcolumn = "auto"
 opt.foldlevel = 99
 opt.foldlevelstart = -1
 opt.foldenable = true
-opt.formatexpr = "v:lua.require'lazyvim.util'.format.formatexpr()"
 opt.formatoptions = "jcroqlnt" -- tcqj
 opt.grepformat = "%f:%l:%c:%m"
 opt.grepprg = "rg --vimgrep"
@@ -91,7 +88,7 @@ opt.showbreak = "↪ "
 opt.sessionoptions = { "buffers", "curdir", "tabpages", "winsize", "help", "globals", "skiprtp", "folds" }
 opt.shiftround = true -- Round indent
 opt.shiftwidth = 2 -- Size of an indent
-opt.shortmess:append { W = true, I = true, c = true, C = true }
+opt.shortmess:append({ W = true, I = true, c = true, C = true })
 opt.showmode = false -- Dont show mode since we have a statusline
 opt.sidescrolloff = 8 -- Columns of context
 opt.signcolumn = "yes" -- Always show the signcolumn, otherwise it would shift the text each time
@@ -99,11 +96,10 @@ opt.smartcase = true -- Don't ignore case with capitals
 opt.smartindent = true -- Insert indents automatically
 opt.spell = false -- Insert indents automatically
 opt.spelllang = { "en_us" }
-opt.spelloptions:append "noplainbuffer"
+opt.spelloptions:append("noplainbuffer")
 opt.splitbelow = true -- Put new windows below current
 opt.splitkeep = "screen"
 opt.splitright = true -- Put new windows right of current
-opt.statuscolumn = [[%!v:lua.require'lazyvim.util'.ui.statuscolumn()]]
 opt.showtabline = 2
 opt.tabstop = 2 -- Number of spaces tabs count for
 opt.termsync = false

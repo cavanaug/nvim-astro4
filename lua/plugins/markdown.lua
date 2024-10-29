@@ -48,6 +48,10 @@ return {
       linters_by_ft = {
         markdown = { "markdownlint-cli2" },
       },
+      -- linters = {
+      --   -- https://github.com/LazyVim/LazyVim/discussions/4094#discussioncomment-10178217
+      --   ["markdownlint-cli2"] = { args = { "--config", os.getenv("HOME") .. "/.markdownlint-cli2.yaml", "--" } },
+      -- },
     },
   },
   --------------------------------------------------------------------------------------

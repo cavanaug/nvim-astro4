@@ -20,6 +20,8 @@
 - Surround chars with the lsp select
 - noice (do I really want it), what about vscode cmd window keybind
 - Man in vim is nice, but the left sidebar/folding etc messes up formatting
+- Man in vim is nice, but the left sidebar/folding etc messes up formatting this is a really long
+  line that will trigger a lint error
 
 ### Todo Items
 

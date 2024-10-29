@@ -31,7 +31,7 @@ return {
           },
         },
         ltex = {
-          enabled = false,
+          enabled = false, -- Until i can fiture out how to disable spell checking this is useless, and honestly its slow as hell
           settings = {
             language = "en-US",
             disabledRules = { ["en"] = { "SPELL_CHECKING" } },
