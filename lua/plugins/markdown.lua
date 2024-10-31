@@ -2,7 +2,7 @@ return {
   --------------------------------------------------------------------------------------
   { --- Markdown syntax highlighting
     "tadmccorkle/markdown.nvim",
-    ft = "markdown", -- or 'event = "VeryLazy"'
+    ft = { "markdown", "norg", "rmd", "org" },
     opts = {
       -- configuration here or empty for defaults
     },
@@ -27,6 +27,18 @@ return {
       },
     },
     ft = { "markdown", "norg", "rmd", "org" },
+    dependencies = {
+      {
+        "nvim-treesitter/nvim-treesitter",
+        opts = function(_, opts)
+          if opts.ensure_installed ~= "all" then
+            opts.ensure_installed =
+              -- TODO: This was copied from astrocommunity and is astrovim specific, need to make it more generic
+              require("astrocore").list_insert_unique(opts.ensure_installed, { "html", "markdown", "markdown_inline" })
+          end
+        end,
+      },
+    },
     config = function(_, opts)
       require("render-markdown").setup(opts)
     end,
@@ -35,7 +47,7 @@ return {
   { --- Markdown preview
     "iamcco/markdown-preview.nvim",
     cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
-    ft = { "markdown" },
+    ft = { "markdown", "norg", "rmd", "org" },
     build = function()
       vim.fn["mkdp#util#install"]()
     end,
@@ -85,6 +97,7 @@ return {
   --------------------------------------------------------------------------------------
   { --- Classic bullets
     "bullets-vim/bullets.vim",
-    enabled = false,
+    enabled = true,
+    ft = { "markdown", "norg", "rmd", "org" },
   },
 }
