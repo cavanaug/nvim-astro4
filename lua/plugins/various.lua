@@ -1,4 +1,10 @@
 return {
+  { -- lazy.nvim
+    enabled = false,
+    "m4xshen/hardtime.nvim",
+    dependencies = { "MunifTanjim/nui.nvim", "nvim-lua/plenary.nvim" },
+    opts = {},
+  },
   {
     -- Prettier indent markers
     "lukas-reineke/indent-blankline.nvim",

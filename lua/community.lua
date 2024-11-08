@@ -46,6 +46,7 @@ return {
   { import = "astrocommunity.motion.mini-surround" },
   { import = "astrocommunity.motion.marks-nvim" }, --                         -- Marks in the gutter
   { import = "astrocommunity.editing-support.telescope-undo-nvim" }, --       -- Telescope undo stack
+  { import = "astrocommunity.editing-support.dial-nvim" }, --       -- Telescope undo stack
   -- { import = "astrocommunity.motion.tabout-nvim" }, --                        -- Tabout of (), {} etc
 
   -- { import = "astrocommunity.editing-support.ultimate-autopair-nvim" },

@@ -50,7 +50,8 @@ end, { noremap = true })
 
 -- vim.keymap.del("n", "<C-'>")
 -- vim.keymap.set("n", "<C-n>", "<cmd>Telescope colorscheme<CR>", { desc = "Change colorscheme (*)" })
-map("n", "<C-Space>", "za", { desc = "Toggle fold under cursor (*)" })
+--
+-- map("n", "<C-Space>", "za", { desc = "Toggle fold under cursor (*)" })
 -- note sure if this is useful
 map("n", "<C-Enter>", "", { desc = "Step into topic (*)" })
 map("n", "<C-BS>", "", { desc = "Step out of topic (*)" })
