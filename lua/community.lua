@@ -38,6 +38,7 @@ return {
   { import = "astrocommunity.completion.copilot-lua-cmp" }, --                -- Fixes tab completion
   { import = "astrocommunity.utility.hover-nvim" },
   { import = "astrocommunity.lsp.nvim-lint" },
+  { import = "astrocommunity.editing-support.conform-nvim" },
 
   -------------------------------------------------------------------------------------------------------------
   ----  motion - "BUFFER" Motion / Editing / Searching

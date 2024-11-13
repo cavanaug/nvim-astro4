@@ -30,13 +30,6 @@ return {
     dependencies = {
       {
         "nvim-treesitter/nvim-treesitter",
-        opts = function(_, opts)
-          if opts.ensure_installed ~= "all" then
-            opts.ensure_installed =
-              -- TODO: This was copied from astrocommunity and is astrovim specific, need to make it more generic
-              require("astrocore").list_insert_unique(opts.ensure_installed, { "html", "markdown", "markdown_inline" })
-          end
-        end,
       },
     },
     config = function(_, opts)
@@ -55,7 +48,7 @@ return {
   --------------------------------------------------------------------------------------
   { --- Markdown linting
     "mfussenegger/nvim-lint",
-    optional = true,
+    optional = disabled,
     opts = {
       linters_by_ft = {
         markdown = { "markdownlint-cli2" },
