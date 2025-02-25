@@ -7,45 +7,45 @@ map("n", "L", "<cmd>bnext<cr>", { noremap = true })
 -- map("n", "H", function() require("snipe").open_buffer_menu() end, { desc = "Open Snipe buffer menu (*)" })
 map("n", "<M-,>", "<cmd>ToggleTerm<cr>", { noremap = true })
 map(
-  "n",
-  "<leader>L",
-  "<cmd>Telescope buffers ignore_current_buffer=true sort_mru=true sort_lastused=true initial_mode=normal<cr>",
-  { noremap = true }
+    "n",
+    "<leader>L",
+    "<cmd>Telescope buffers ignore_current_buffer=true sort_mru=true sort_lastused=true initial_mode=normal<cr>",
+    { noremap = true }
 )
 map("n", "<Tab>", function()
-  require("telescope.builtin").buffers({
-    -- border = false,
-    -- border = {
-    --   preview = { 1, 1, 1, 1 }, -- top, right, bottom, left
-    --   prompt = { 1, 1, 0, 1 }, -- top, right, bottom, left
-    --   results = { 0, 0, 0, 0 }, -- top, right, bottom, left
-    -- },
-    -- entry_maker = function(entry)
-    --   return { entry }
-    -- end,
-    sort_mru = true,
-    sort_lastused = true,
-    -- ignore_current_buffer = true,
-    initial_mode = "normal",
-    layout_strategy = "horizontal",
-    previewer = true,
-    -- path_display = "shorten",
-    layout_config = {
-      -- enable_preview = true,
-      -- width_padding = 0.2, -- adjust this value to your liking
-      -- preview_position = "right", -- set to 'right' for upper right position
-      prompt_position = "top",
-      anchor = "N",
-      -- preview_width = 0.25,
-      -- preview_cutoff = 120,
-      height = 0.50,
-      -- width = vim.fn.winwidth(0),
-      width = 0.99,
-    },
-    -- yoffset = 1,
-    -- xoffset = 1,
-    -- enable_preview = true,
-  })
+    require("telescope.builtin").buffers({
+        -- border = false,
+        -- border = {
+        --   preview = { 1, 1, 1, 1 }, -- top, right, bottom, left
+        --   prompt = { 1, 1, 0, 1 }, -- top, right, bottom, left
+        --   results = { 0, 0, 0, 0 }, -- top, right, bottom, left
+        -- },
+        -- entry_maker = function(entry)
+        --   return { entry }
+        -- end,
+        sort_mru = true,
+        sort_lastused = true,
+        -- ignore_current_buffer = true,
+        initial_mode = "normal",
+        layout_strategy = "horizontal",
+        previewer = true,
+        -- path_display = "shorten",
+        layout_config = {
+            -- enable_preview = true,
+            -- width_padding = 0.2, -- adjust this value to your liking
+            -- preview_position = "right", -- set to 'right' for upper right position
+            prompt_position = "top",
+            anchor = "N",
+            -- preview_width = 0.25,
+            -- preview_cutoff = 120,
+            height = 0.50,
+            -- width = vim.fn.winwidth(0),
+            width = 0.99,
+        },
+        -- yoffset = 1,
+        -- xoffset = 1,
+        -- enable_preview = true,
+    })
 end, { noremap = true })
 
 -- vim.keymap.del("n", "<C-'>")
@@ -57,19 +57,45 @@ map("n", "<C-Enter>", "", { desc = "Step into topic (*)" })
 map("n", "<C-BS>", "", { desc = "Step out of topic (*)" })
 
 map("n", "<leader>c", function()
-  local buffer_count = 0
-  for _, bufinfo in ipairs(vim.fn.getbufinfo({ buflisted = 1 })) do
-    buffer_count = buffer_count + 1
-  end
-  if buffer_count == 1 then
-    vim.cmd("q")
-  else
-    vim.cmd("bd")
-  end
+    local buffer_count = 0
+    for _, bufinfo in ipairs(vim.fn.getbufinfo({ buflisted = 1 })) do
+        buffer_count = buffer_count + 1
+    end
+    if buffer_count == 1 then
+        vim.cmd("q")
+    else
+        vim.cmd("bd")
+    end
 end, { desc = "Close pane (*)" })
 
+-- Toogle Window Split Orientation (warn: Overrides default <C-f> behavior)
+map("n", "<C-f>", function()
+    local win1 = vim.api.nvim_list_wins()[1]
+    local win2 = vim.api.nvim_list_wins()[2]
+
+    -- Ensure exactly two windows exist
+    if not win1 or not win2 then
+        print("There must be exactly two windows to toggle orientation.")
+        return
+    end
+
+    -- Get window positions
+    local win1_pos = vim.api.nvim_win_get_position(win1)
+    local win2_pos = vim.api.nvim_win_get_position(win2)
+
+    -- Determine if the windows are arranged horizontally or vertically
+    local is_horizontal = win1_pos[1] == win2_pos[1] -- Same row means it's horizontal
+
+    -- Toggle orientation using `wincmd H` (vertical) and `wincmd K` (horizontal)
+    if is_horizontal then
+        vim.cmd("wincmd K") -- Move the second window to be stacked (horizontal)
+    else
+        vim.cmd("wincmd H") -- Move the second window to be side-by-side (vertical)
+    end
+end, { desc = "Flip window split orientation", noremap = true })
+
 if true then
-  return {}
+    return {}
 end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
 
 -- maps.n["<Leader>fa"] = {

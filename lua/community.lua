@@ -31,15 +31,27 @@ return {
     -- { import = "astrocommunity.indent.indent-blankline-nvim" },   -- Indenting is messed up, I need to figure out how to fix it
 
     -------------------------------------------------------------------------------------------------------------
+    ---
     ----  lsp - LSP / Completion / Hover
     -------------------------------------------------------------------------------------------------------------
-    { import = "astrocommunity.completion.avante-nvim" },
+
     { import = "astrocommunity.completion.cmp-cmdline" },
-    { import = "astrocommunity.completion.copilot-lua" },
-    { import = "astrocommunity.completion.copilot-lua-cmp" }, --                -- Fixes tab completion
+
     { import = "astrocommunity.utility.hover-nvim" },
     { import = "astrocommunity.lsp.nvim-lint" },
     { import = "astrocommunity.editing-support.conform-nvim" },
+
+    -------------------------------------------------------------------------------------------------------------
+    ----  ai - AI / Copilot / ChatGPT
+    -------------------------------------------------------------------------------------------------------------
+
+    --- AI Code completion
+    { import = "astrocommunity.completion.copilot-lua" },
+    { import = "astrocommunity.completion.copilot-lua-cmp" }, --                -- Fixes tab completion?>?
+    { import = "astrocommunity.completion.avante-nvim" },
+
+    --- AI Chat
+    { import = "astrocommunity.editing-support.copilotchat-nvim" },
 
     -------------------------------------------------------------------------------------------------------------
     ----  motion - "BUFFER" Motion / Editing / Searching
@@ -88,7 +100,7 @@ return {
     -------------------------------------------------------------------------------------------------------------
     ----  language - Various Language support
     -------------------------------------------------------------------------------------------------------------
-    { import = "astrocommunity.neovim-lua-development.lazydev-nvim" },
+    -- { import = "astrocommunity.neovim-lua-development.lazydev-nvim" },
 
     -------------------------------------------------------------------------------------------------------------
     ----  packs - Language support packs
