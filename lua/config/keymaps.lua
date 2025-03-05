@@ -69,7 +69,7 @@ map("n", "<leader>c", function()
 end, { desc = "Close pane (*)" })
 
 -- Toogle Window Split Orientation (warn: Overrides default <C-f> behavior)
-map("n", "<C-f>", function()
+map("n", "<C-e>", function()
     local win1 = vim.api.nvim_list_wins()[1]
     local win2 = vim.api.nvim_list_wins()[2]
 
@@ -92,7 +92,7 @@ map("n", "<C-f>", function()
     else
         vim.cmd("wincmd H") -- Move the second window to be side-by-side (vertical)
     end
-end, { desc = "Flip window split orientation", noremap = true })
+end, { desc = "Exchange window split orientation", noremap = true })
 
 if true then
     return {}
