@@ -21,7 +21,13 @@ require("lazy_setup")
 require("config/options")
 require("config/autocmds")
 require("config/keymaps")
+
 -- require("user/utils")
 -- require("user/mappings")
 
 require("polish")
+
+-- HACK: This is a crazy hack to force clipboard, somehow it was getting set to unnamedplus and I couldnt stop it
+vim.defer_fn(function()
+    vim.opt.clipboard = ""
+end, 100)
