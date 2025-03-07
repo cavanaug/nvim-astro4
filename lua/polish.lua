@@ -22,6 +22,7 @@ vim.cmd([[
       autocmd!
       autocmd BufNewFile,BufRead .envrc setfiletype bash
       autocmd BufNewFile,BufRead *.shrc setfiletype bash
+      autocmd BufNewFile,BufRead .bash* setfiletype bash
       autocmd BufNewFile,BufRead *.avsc setfiletype json
       autocmd BufNewFile,BufRead *.rss *.atom setfiletype xml
       autocmd BufNewFile,BufRead *.json setfiletype jsonc
