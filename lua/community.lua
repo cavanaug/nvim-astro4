@@ -48,10 +48,10 @@ return {
     --- AI Code completion
     { import = "astrocommunity.completion.copilot-lua" },
     { import = "astrocommunity.completion.copilot-lua-cmp" }, --                -- Fixes tab completion?>?
-    { import = "astrocommunity.completion.avante-nvim" },
 
     --- AI Chat
     { import = "astrocommunity.editing-support.copilotchat-nvim" },
+    { import = "astrocommunity.completion.avante-nvim" },
 
     -------------------------------------------------------------------------------------------------------------
     ----  motion - "BUFFER" Motion / Editing / Searching
@@ -115,6 +115,6 @@ return {
     -- { import = "astrocommunity.pack.cpp" },
     -- { import = "astrocommunity.pack.docker" },
     { import = "astrocommunity.pack.go" },
-    -- { import = "astrocommunity.pack.rust" },
+    { import = "astrocommunity.pack.rust" },
     -- { import = "astrocommunity.pack.zig" },
 }
