@@ -1,7 +1,7 @@
 return {
     { --- This exists to modify the folding marker to what I like
         "kevinhwang91/nvim-ufo",
-        enabled = false,
+        enabled = false, -- WARNING: This plugin is not working with the current version of nvim
         dependencies = { "kevinhwang91/promise-async" },
         opts = function(plugin, opts)
             opts.fold_virt_text_handler = function(virtText, lnum, endLnum, width, truncate)
