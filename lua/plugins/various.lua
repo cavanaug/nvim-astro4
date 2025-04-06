@@ -8,6 +8,7 @@ return {
   {
     -- Prettier indent markers
     "lukas-reineke/indent-blankline.nvim",
+    enabled = false, -- Enable this plugin by default
     opts = function(_, opts)
       opts.indent = { char = "┆" }
       -- opts.indent = { char = "" }
@@ -34,6 +35,7 @@ return {
   {
     -- TODO: This needs refactoring in light of mini-files & oil usage
     "nvim-neo-tree/neo-tree.nvim",
+    enabled = false,
     branch = "v3.x",
     dependencies = {
       "nvim-lua/plenary.nvim",
